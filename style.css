@@ -9,6 +9,10 @@ body {
 }
 
 /* Header  */
+.main {
+    width: 100vw;
+    height: 100vh;
+}
 
 /* Footer  */
 
@@ -31,9 +35,7 @@ body {
     transition: all 0.5s;
 }
 
-.hexagon:hover,
-.filled,
-.enter_hex {
+.hexagon:hover,.filled,.enter_hex {
     transform: scale(1);
     stroke: #0ffbf9;
     fill: rgb(6,174,226, 0.25);
@@ -59,11 +61,7 @@ body {
 }
 
 .fade {
-    /* stroke: #0ffbf9; */
-    /* fill: rgb(6,174,226, 0.25); */
-    /* stroke-width: 3; */
-    /* animation: fadeInOut 15s infinite; */
-    animation: heartBeat 5s;
+    animation: heartBeat 4s ease-in-out;
 }
 
 @keyframes heartBeat {
@@ -71,24 +69,10 @@ body {
         transform: scale(1);
     }
     50% {
-        transform: scale(0.8);
+        transform: scale(0.75);
     }
     100% {
         transform: scale(1);
-    }
-}
-
-@keyframes fadeInOut {
-    0% {
-        fill: none;
-    }
-
-    50% {
-        fill: white;
-    }
-
-    100% {
-        fill: none;
     }
 }
 
@@ -107,75 +91,125 @@ body {
     fill: rgb(6, 174, 226, 0.25);
 }
 
-
-
-.faded {
-    stroke: white;    
-    fill: rgba(255, 0, 0, 0.034);
-    fill: rgb(0, 140, 255, 0.025);
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1;
-        fill: none;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 0;
-        fill: cyan;
-        transform:scale(0.8);
-        
-    }
-    100% {
-        opacity: 1;
-        fill:none;
-        transform:scale(1);
-    }
-}
-
-.grow {
-    stroke: white;
-    transition: all 5s ease-in-out;
-    transform: scale(0.75);
-    /* transform: scale(0.75); */
-    /* stroke-width: 2; */
-}
-
 @keyframes dash {
     to {
         stroke-dashoffset: 1000;
     }
 }
 
-@-webkit-keyframes fadeInAndOut {
-    0% {
-        transform: rotate(180deg) scale(1.10);
-    }
-
-    50% {
-        transform: rotate(180deg) scale(0.75);
-    }
-
-    100% {}
-}
-
-.disappear {
-    animation: disappear 3s linear;
-}
-
-@-webkit-keyframes disappear {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(0) rotate(90deg);
-        opacity: 1;
-    }
-}
-
 /* About Me Page */
+#name {
+    text-align: center;
+    /* position: absolute; */
+    font-size: 4rem;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about-paragraph {
+    color: white;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 700px;
+    padding: 15px;
+    background-color: rgb(6,174,226, 0.35);
+    border-radius: 5px;
+    line-height: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    /* text-shadow: black 0px 0px 5px; */
+    border-bottom: 3px solid cyan;
+    border-top: 3px solid cyan;
+}
+
+.highlight {
+    color: #0ffbf9;
+}
+
+.slider {
+    display: none;
+    color: #0ffbf9;
+}
+
+.trigger-parent {
+    margin-top: 1.5rem;
+}
+
+.trigger-parent a {
+    transition: margin 400ms;
+    color: white;
+}
+
+.media-links {
+    position: absolute;
+    top: calc(50% - 128px);
+    left: 2rem;
+    z-index: 2;
+}
+
+.media-links span {
+    margin-left: 1rem;
+}
+
+.media-links ul {
+    font-size: 1.5rem;
+    /* color: white; */
+    list-style-type: none;
+}
+
+.media-links ul a {
+    text-decoration: none;
+    /* color: white; */
+}
+
+.media-links ul i {
+    font-size: 30px;
+    list-style-type: none;
+    /* margin-top: 25px; */
+}
+
+.media-links i:hover {
+    list-style-type: none;
+}
+
+.media-links li:before {
+    position: absolute;
+    left: -18px;
+    line-height: 25px;
+}
+
+
+#corner-top-left, #corner-top-right, #corner-bottom-left, #corner-bottom-right {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+}
+
+#corner-bottom-left {
+    left: 1rem;
+    bottom: 1rem;
+    border-left: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+}
+#corner-bottom-right {
+    right: 1rem;
+    bottom: 1rem;
+    border-right: 1.5px solid white;
+    border-bottom: 1.5px solid white;
+}
+#corner-top-left {
+    left: 1rem;
+    top: 1rem;
+    border-left: 1.5px solid white;
+    border-top: 1.5px solid white;
+}
+#corner-top-right {
+    right: 1rem;
+    top: 1rem;
+    border-right: 1.5px solid white;
+    border-top: 1.5px solid white;
+}
 
 /* Projects Page */
 

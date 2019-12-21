@@ -923,18 +923,18 @@
     .hexagon {
         /* opacity: 0; */
         /* fill: rgb(100, 255, 218); */
-        fill: rgb(6,174,226, 0.075);
         /* fill: black; */
         /* fill: black; */
         /* stroke: rgba(3, 96, 124, 0.85); */
+        fill: rgb(6,174,226, 0.075);
         stroke: white;
         stroke: rgb(6,174,226, 0.5);
         stroke-width: 1.5;
+        cursor: pointer;
         /* stroke-width: 5; */
         /* stroke-dasharray: 1000;
         stroke-dashoffset: 1000;
         animation: dash 5s linear forwards; */
-        cursor: pointer;
     }
       
       @keyframes dash {

@@ -5,22 +5,58 @@
 
 body {
     background-color: black;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 /* Header  */
 .main {
-    width: 100vw;
     height: 100vh;
+    color: white;
+}
+
+.navbar {
+    display: block;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline-block;
+    margin: 0 0.25rem;
+    padding: 1rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 1px solid #0ffbf9;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
 }
 
 /* Footer  */
 
 /* Index Page */
 
+#AE_Logo {
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    left: 2rem;
+    top: 2rem;
+}
+
 /* ===== Hexagons ===== */
 
 .hexagon {
+    position: fixed;
     fill: rgb(6, 174, 226, 0.075);
     stroke: rgb(6, 174, 226, 0.5);
     stroke-width: 1.5;
@@ -101,26 +137,48 @@ body {
 #name {
     text-align: center;
     /* position: absolute; */
-    font-size: 4rem;
+    font-size: 4em;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#headshot {
+    margin: 0 auto;
+    width: 15rem;
+    display: block;
+    border: 2px solid cyan;
+    border-radius: 50%;
+    background-color: #0ffbf732;
+    background-color: #06abe262;
+    transition: all 1s;
+}
+
+#email {
+    position: fixed;
+    transform: rotate(-90deg);
+    right: -1rem;
+    top:calc(50% - 20px);
+    text-decoration: none;
+    color: white;
+}
+
+#email:hover {
+    color: #0ffbf9;
 }
 
 #about-paragraph {
     color: white;
     margin: 0 auto;
     overflow: hidden;
-    max-width: 700px;
-    padding: 15px;
-    background-color: rgb(6,174,226, 0.35);
-    border-radius: 5px;
+    max-width: 800px;
+    padding: 1rem;
     line-height: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
-    /* text-shadow: black 0px 0px 5px; */
-    border-bottom: 3px solid cyan;
-    border-top: 3px solid cyan;
+    /* border: 2px solid #0ffbf9; */
+    background-color: #06abe262;
+    box-shadow: 0px 0px 30px #06abe262;
 }
 
 .highlight {
@@ -142,7 +200,7 @@ body {
 }
 
 .media-links {
-    position: absolute;
+    position: fixed;
     top: calc(50% - 128px);
     left: 2rem;
     z-index: 2;
@@ -173,15 +231,41 @@ body {
     list-style-type: none;
 }
 
-.media-links li:before {
-    position: absolute;
-    left: -18px;
-    line-height: 25px;
+/* Typewriter effect */
+#container {
+    color: white;
+    width: 100vw;
+    text-align: center;
+    font-size: 40px;
+    margin: 1rem 0;
 }
 
+#text {
+    display: inline-block;
+    color: white;
+    border-right: 3px solid #06aae2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#follow {
+    background: url('/static/images/AELogo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position-x: center;
+    background-position-y: center;
+    /* background-color: red; */
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transition: all 1s;
+    z-index: -1;
+    left: 2rem;
+    top: 2rem;
+}
 
 #corner-top-left, #corner-top-right, #corner-bottom-left, #corner-bottom-right {
-    position: absolute;
+    position: fixed;
     width: 4rem;
     height: 4rem;
 }
@@ -212,6 +296,178 @@ body {
 }
 
 /* Projects Page */
+.projects {
+    display: grid;
+    margin: 0 auto;
+    max-width: 80vw;
+}
+
+.project {
+    color: white;
+    font-family: sans-serif;
+}
+
+#project-container {
+    margin-top: 4rem;
+}
+
+.title1 { grid-area: title1; }
+.title2 { grid-area: title2; }
+.project1 { grid-area: project1; }
+.project2 { grid-area: project2; }
+.project3 { grid-area: project3; }
+.project4 { grid-area: project4; }
+.project5 { grid-area: project5; }
+.project6 { grid-area: project6; }
+.project7 { grid-area: project7; }
+.project8 { grid-area: project8; }
+
+.grid-container {
+    display: grid;
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-areas:
+        'title1 title1 title2 title2'
+        'project1 project2 project3 project4'
+        'project5 project6 project7 project8';
+    /* background-color: #2196F3; */
+    /* padding: 10px; */
+    /* max-width: 75vw; */
+    max-width: 90vw;
+    margin: 0 auto;
+    grid-gap: 10px;
+}
+.grid-item {
+    /* background-color: rgba(0, 255, 255, 0.404); */
+    /* background-color: rgba(0, 255, 255, 0.25); */
+    /* background-color: #0ffbf732; */
+    background-color: #06abe262;
+    /* border: 1px solid #0ffbf9; */
+    padding: 5px;
+    font-size: 1rem;
+    text-align: center;
+    min-height: 25rem;
+}
+
+.grid-item:hover {
+    background-color: #06abe298;
+    transform: scale(1.15);
+    transition: all 0.5s;
+    box-shadow: 2px 2px 10px black;
+    cursor: pointer;
+}
+
+.grid-item .description {
+    margin: 1rem;
+}
+
+.grid-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    /* max-width: 90%; */
+    /* max-height: 150px; */
+    margin: 1.5rem auto;
+}
+
+.grid-item .links {
+    display: inline-block;
+}
+
+.grid-item a {
+    text-decoration: none;
+    color: white;
+}
+
+.grid-item .links i {
+    padding:0px 5px;
+    font-size: 1.5rem;
+}
+
+.projects i:hover {
+    color: cyan;
+}
+
+.grid-item h2 {
+    color: #0ffbf9;
+}
+
+.grid-item ul li {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.grid-item ul li i {
+    margin: 0.5rem;
+}
+
+.grid-item-title {
+    color: white;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.technologies li {
+    display: inline-block;
+}
+
+/* Project Modals  */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    position: relative;
+    /* top: 25%; */
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    /* padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s; */
+    text-decoration: none;
+    color: #06aae2;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    z-index: 10;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+  }
+
 
 /* Education Page */
 
@@ -222,7 +478,6 @@ body {
 /* Hexagon Positions */
 /* Ring 1 */
 .hex1 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh - 87.5px);
@@ -230,42 +485,36 @@ body {
 
 /* Ring 2 */
 .hex2 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh - 87.5px - 175px);
 }
 
 .hex3 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px + 150px);
     top: calc(50vh - 87.5px - 87.5px);
 }
 
 .hex4 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px + 150px);
     top: calc(50vh);
 }
 
 .hex5 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh + 87.5px);
 }
 
 .hex6 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 150px);
     top: calc(50vh);
 }
 
 .hex7 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 150px);
     top: calc(50vh - 175px);
@@ -273,84 +522,72 @@ body {
 
 /* Ring 3 */
 .hex8 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh - 87.5px - 350px);
 }
 
 .hex9 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh - 87.5px - 262.5px);
 }
 
 .hex10 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 150px);
     top: calc(50vh - 87.5px - 175px);
 }
 
 .hex11 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 150px);
     top: calc(50vh - 87.5px);
 }
 
 .hex12 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 150px);
     top: calc(50vh - 87.5px + 175px);
 }
 
 .hex13 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh - 87.5px + 262.5px);
 }
 
 .hex14 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh - 87.5px + 350px);
 }
 
 .hex15 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 150px);
     top: calc(50vh + 87.5px + 87.5px);
 }
 
 .hex16 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 300px);
     top: calc(50vh + 87.5px);
 }
 
 .hex17 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 300px);
     top: calc(50vh - 87.5px);
 }
 
 .hex18 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 300px);
     top: calc(50vh - 87.5px - 175px);
 }
 
 .hex19 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 150px);
     top: calc(50vh - 87.5px - 262.5px);
@@ -358,133 +595,114 @@ body {
 
 /* Ring 4 */
 .hex20 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh - 87.5px - 437.5px);
 }
 
 .hex21 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 150px);
     top: calc(50vh - 87.5px - 350px);
 }
 
 .hex22 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 300px);
     top: calc(50vh - 87.5px - 262.5px);
 }
 
 .hex23 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 300px);
     top: calc(50vh - 87.5px - 87.5px);
 }
 
 .hex24 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 300px);
     top: calc(50vh);
 }
 
 .hex25 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 300px);
     top: calc(50vh + 175px);
 }
 
 .hex26 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px + 150px);
     top: calc(50vh + 262.5px);
 }
 
 .hex27 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh + 350px);
 }
 
 .hex28 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh + 350px);
 }
 
 .hex29 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh + 437.5px);
 }
 
 .hex30 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 250px);
     top: calc(50vh + 350px);
 }
 
 .hex31 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 400px);
     top: calc(50vh + 262.5px);
 }
 
 .hex32 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh + 175px);
 }
 
 .hex33 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh);
 }
 
 .hex34 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh - 175px);
 }
 
 .hex35 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh - 350px);
 }
 
 .hex36 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 400px);
     top: calc(50vh - 437.5px);
 }
 
 .hex37 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px - 150px);
     top: calc(50vh - 87.5px - 437.5px);
 }
 
 .hex38 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh - 87.5px - 525px);
@@ -493,175 +711,150 @@ body {
 /* Row 5 */
 
 .hex39 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh - 787.5px);
 }
 
 .hex40 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh - 700px);
 }
 
 .hex41 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 200px);
     top: calc(50vh - 612.5px);
 }
 
 .hex42 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 350px);
     top: calc(50vh - 525px);
 }
 
 .hex43 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh - 437.5px);
 }
 
 .hex44 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh - 262.5px);
 }
 
 .hex45 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh - 87.5px);
 }
 
 .hex46 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh + 87.5px);
 }
 
 .hex47 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh + 262.5px);
 }
 
 .hex48 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 350px);
     top: calc(50vh + 350px);
 }
 
 .hex49 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 200px);
     top: calc(50vh + 437.5px);
 }
 
 .hex50 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 50px);
     top: calc(50vh + 525px);
 }
 
 .hex51 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 100px);
     top: calc(50vh + 612.5px);
 }
 
 .hex52 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 250px);
     top: calc(50vh + 525px);
 }
 
 .hex53 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 400px);
     top: calc(50vh + 437.5px);
 }
 
 .hex54 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh + 350px);
 }
 
 .hex55 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh + 262.5px);
 }
 
 .hex56 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh + 87.5px);
 }
 
 .hex57 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh - 87.5px);
 }
 
 .hex58 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh - 262.5px);
 }
 
 .hex59 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh - 437.5px);
 }
 
 .hex60 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh - 525px);
 }
 
 .hex61 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 400px);
     top: calc(50vh - 612.5px);
 }
 
 .hex62 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 250px);
     top: calc(50vh - 700px);
 }
 
 .hex63 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 250px);
     top: calc(50vh - 700px);
@@ -670,168 +863,144 @@ body {
 /* Row 6 */
 
 .hex64 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 200px);
     top: calc(50vh - 787.5px);
 }
 
 .hex65 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 350px);
     top: calc(50vh - 700px);
 }
 
 .hex66 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh - 612.5px);
 }
 
 .hex67 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 650px);
     top: calc(50vh - 525px);
 }
 
 .hex68 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 650px);
     top: calc(50vh - 350px);
 }
 
 .hex69 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 650px);
     top: calc(50vh - 175px);
 }
 
 .hex70 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 650px);
     top: calc(50vh);
 }
 
 .hex71 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 650px);
     top: calc(50vh + 175px);
 }
 
 .hex72 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 650px);
     top: calc(50vh + 350px);
 }
 
 .hex73 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 500px);
     top: calc(50vh + 437.5px);
 }
 
 .hex74 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 350px);
     top: calc(50vh + 525px);
 }
 
 .hex75 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 200px);
     top: calc(50vh + 612.5px);
 }
 
 .hex76 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 400px);
     top: calc(50vh + 612.5px);
 }
 
 .hex77 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh + 525px);
 }
 
 .hex78 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh + 437.5px);
 }
 
 .hex79 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 850px);
     top: calc(50vh + 350px);
 }
 
 .hex80 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 850px);
     top: calc(50vh + 175px);
 }
 
 .hex81 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 850px);
     top: calc(50vh);
 }
 
 .hex82 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 850px);
     top: calc(50vh - 175px);
 }
 
 .hex83 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 850px);
     top: calc(50vh - 350px);
 }
 
 .hex84 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 850px);
     top: calc(50vh - 525px);
 }
 
 .hex85 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 700px);
     top: calc(50vh - 612.5px);
 }
 
 .hex86 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 550px);
     top: calc(50vh - 700px);
 }
 
 .hex87 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 400px);
     top: calc(50vh - 787.5px);
@@ -840,49 +1009,42 @@ body {
 /* Row 7 */
 
 .hex88 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh - 612.5px);
 }
 
 .hex89 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh - 437.5px);
 }
 
 .hex90 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh - 262.5px);
 }
 
 .hex91 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh - 87.5px);
 }
 
 .hex92 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh + 87.5px);
 }
 
 .hex93 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh + 262.5px);
 }
 
 .hex94 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 800px);
     top: calc(50vh + 437.5px);
@@ -891,49 +1053,42 @@ body {
 /* Row 7 */
 
 .hex95 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh + 437.5px);
 }
 
 .hex96 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh + 262.5px);
 }
 
 .hex97 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh + 87.5px);
 }
 
 .hex98 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh - 87.5px);
 }
 
 .hex99 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh - 262.5px);
 }
 
 .hex100 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh - 437.5px);
 }
 
 .hex101 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1000px);
     top: calc(50vh - 612.5px);
@@ -942,42 +1097,36 @@ body {
 /* Row 8 */
 
 .hex102 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 950px);
     top: calc(50vh - 525px);
 }
 
 .hex103 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 950px);
     top: calc(50vh - 350px);
 }
 
 .hex104 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 950px);
     top: calc(50vh - 175px);
 }
 
 .hex105 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 950px);
     top: calc(50vh);
 }
 
 .hex106 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 950px);
     top: calc(50vh + 175px);
 }
 
 .hex107 {
-    position: absolute;
     z-index: -1;
     left: calc(50% + 950px);
     top: calc(50vh + 350px);
@@ -986,42 +1135,36 @@ body {
 /* Row 8 */
 
 .hex108 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1150px);
     top: calc(50vh - 525px);
 }
 
 .hex109 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1150px);
     top: calc(50vh - 350px);
 }
 
 .hex110 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1150px);
     top: calc(50vh - 175px);
 }
 
 .hex111 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1150px);
     top: calc(50vh);
 }
 
 .hex112 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1150px);
     top: calc(50vh + 175px);
 }
 
 .hex113 {
-    position: absolute;
     z-index: -1;
     left: calc(50% - 1150px);
     top: calc(50vh + 350px);
@@ -1033,12 +1176,44 @@ body {
     body {
         background: red;
     }
+
+    .grid-container {
+        margin: 0;
+        /* grid-template-columns: auto auto; */
+        grid-template-areas: 
+        'title1'
+        'project1'
+        'project2'
+        'title2'
+        'project3'
+        'project4'
+        'project5'
+        'project6'
+        'project7'
+        'project8'
+    }
+
+    #about-paragraph {
+        font-size: 0.75rem;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body {
         background: green;
+    }
+
+    .grid-container {
+        margin: 0;
+        /* grid-template-columns: auto auto; */
+        grid-template-areas: 
+        'title1 title2'
+        'project1 project2'
+        'project3 project4'
+        'project5 project6'
+        'project7 project8'
     }
 }
 
@@ -1047,12 +1222,32 @@ body {
     body {
         background: blue;
     }
+
+    .grid-container {
+        margin: 0;
+        /* grid-template-columns: auto auto; */
+        grid-template-areas: 
+        'title1 title2'
+        'project1 project2'
+        'project3 project4'
+        'project5 project6'
+        'project7 project8'
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body {
         background: orange;
+    }
+    
+    .grid-container {
+        margin: 0 auto;
+        /* grid-template-columns: auto auto; */
+        grid-template-areas: 
+        'title1 title2'
+        'project1 project2 project3 project4'
+        'project5 project6 project7 project8'
     }
 }
 
@@ -1061,4 +1256,11 @@ body {
     body {
         background: black;
     }
+
+    .grid-container {
+        grid-template-areas:
+        'title1 title1 title2 title2'
+        'project1 project2 project3 project4'
+        'project5 project6 project7 project8'
+        }
 }

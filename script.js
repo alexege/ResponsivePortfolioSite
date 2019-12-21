@@ -1,15 +1,86 @@
+// Get Mouse position on scroll
+var xMousePos = 0;
+var yMousePos = 0;
+var lastScrolledLeft = 0;
+var lastScrolledTop = 0;
+
+$(document).mousemove(function(event) {
+    captureMousePosition(event);
+})  
+
+    $(window).scroll(function(event) {
+        if(lastScrolledLeft != $(document).scrollLeft()){
+            xMousePos -= lastScrolledLeft;
+            lastScrolledLeft = $(document).scrollLeft();
+            xMousePos += lastScrolledLeft;
+        }
+        if(lastScrolledTop != $(document).scrollTop()){
+            yMousePos -= lastScrolledTop;
+            lastScrolledTop = $(document).scrollTop();
+            yMousePos += lastScrolledTop;
+        }
+        window.status = "x = " + xMousePos + " y = " + yMousePos;
+    });
+function captureMousePosition(event){
+    xMousePos = event.pageX;
+    yMousePos = event.pageY;
+    window.status = "x = " + xMousePos + " y = " + yMousePos;
+    // console.log("x = " + xMousePos + " y = " + yMousePos);
+}
+
+$(document).on('mouseenter', 'a', function(e){
+
+    captureMousePosition(e);
+
+
+    console.log("Mouse positionX: ", e.clientX);
+    console.log("Mouse positionY: ", e.clientY);
+
+    document.getElementById('follow').style.left = `${xMousePos - 25}px`;
+    document.getElementById('follow').style.top = `${yMousePos - 25}px`;
+
+    document.getElementById('corner-top-left').style.borderLeft = '2px solid cyan';
+    document.getElementById('corner-top-left').style.borderTop = '2px solid cyan';
+    document.getElementById('corner-top-right').style.borderRight = '2px solid cyan';
+    document.getElementById('corner-top-right').style.borderTop = '2px solid cyan';
+    document.getElementById('corner-bottom-left').style.borderLeft = '2px solid cyan';
+    document.getElementById('corner-bottom-left').style.borderBottom = '2px solid cyan';
+    document.getElementById('corner-bottom-right').style.borderRight = '2px solid cyan';
+    document.getElementById('corner-bottom-right').style.borderBottom = '2px solid cyan';
+})
+
+$(document).on('mouseleave', 'a', function(e){
+
+    document.getElementById('corner-top-left').style.borderLeft = '2px solid white';
+    document.getElementById('corner-top-left').style.borderTop = '2px solid white';
+    document.getElementById('corner-top-right').style.borderRight = '2px solid white';
+    document.getElementById('corner-top-right').style.borderTop = '2px solid white';
+    document.getElementById('corner-bottom-left').style.borderLeft = '2px solid white';
+    document.getElementById('corner-bottom-left').style.borderBottom = '2px solid white';
+    document.getElementById('corner-bottom-right').style.borderRight = '2px solid white';
+    document.getElementById('corner-bottom-right').style.borderBottom = '2px solid white';
+})
+
+function openProjectModal(project){
+    var selected_project = document.getElementById(project);
+    console.log("Opening modal for " + project + "_nav");
+    document.getElementById(`${project}_nav`).style.width = "100%";
+}
+
+function closeNav(project){
+    document.getElementById(`${project}_nav`).style.width = "0";
+}
+
+// Social Media Buttons
 $(document).on('mouseenter', '.trigger-parent', function(){
     var name = this.querySelector('.trigger').getAttribute('name');
-    console.log("this:", this.getAttribute('name'));
     document.querySelector(`.${name}-slider`).style.display = "inline-block";
     this.querySelector('a').style.marginLeft = '1rem';
-    // this.querySelector('span').style.color = "#0ffbf9";
     this.style.borderLeft = '2px solid #0ffbf9';
 });
 
 $(document).on('mouseleave', '.trigger-parent', function(){
     var name = this.querySelector('.trigger').getAttribute('name');
-    console.log("this:", this.getAttribute('name'));
     document.querySelector(`.${name}-slider`).style.display = "none";
     this.querySelector('a').style.marginLeft = '0rem';
     this.style.borderLeft = 'none';
@@ -82,9 +153,28 @@ function Enter(){
     }, 750)
 
     setTimeout(function(){
+
         window.location.href = '/about.html';
+        document.getElementsByClassName('hexagon').style.display = "block";
+        aboutPageTrigger();
     }, 2000);
-    onIndexPage = false;
+}
+
+$(document).on('click', '#about_button', function(){
+    setTimeout(function(){
+        aboutPageTrigger();
+    }, 5000);
+});
+
+function aboutPageTrigger(){
+    console.log("It's working!");
+    document.getElementsByClassName('hexagon')[0].style.opacity = 0;
+    var hexagons = document.getElementsByClassName('hexagon');
+    // for(var i = 0; i < hexagons.length; i++) {
+    //     hexagons[i].style.position = 'fixed';
+    // }
+    
+    document.getElementsByClassName('hexagon')[0].style.opacity = 0;
 }
 
 function fade(element) {
@@ -106,6 +196,66 @@ function scale(element) {
     }, 50);
 }
 
+function typewriter(){
+    // TypeWriter Effect
+    // List of sentences
+    var _CONTENT = [ "Web Developer", "Computer Engineer", "Unicyclist", "Software Developer"];
+
+    // Current sentence being processed
+    var _PART = 0;
+    
+    // Character number of the current sentence being processed 
+    var _PART_INDEX = 0;
+    
+    // Holds the handle returned from setInterval
+    var _INTERVAL_VAL;
+    
+    // Element that holds the text
+    var _ELEMENT = document.querySelector("#text");
+    
+    // Implements typing effect
+    function Type() { 
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
+    
+        // If full sentence has been displayed then start to delete the sentence after some time
+        if(text === _CONTENT[_PART]) {
+            clearInterval(_INTERVAL_VAL);
+            setTimeout(function() {
+                _INTERVAL_VAL = setInterval(Delete, 50);
+            }, 1000);
+        }
+    }
+    
+    // Implements deleting effect
+    function Delete() {
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
+    
+        // If sentence has been deleted then start to display the next sentence
+        if(text === '') {
+            clearInterval(_INTERVAL_VAL);
+    
+            // If last sentence then display the first one, else move to the next
+            if(_PART == (_CONTENT.length - 1))
+                _PART = 0;
+            else
+                _PART++;
+            _PART_INDEX = 0;
+    
+            // Start to display the next sentence after some time
+            setTimeout(function() {
+                _INTERVAL_VAL = setInterval(Type, 100);
+            }, 800);
+        }
+    }
+    
+    // Start the typing effect on load
+    _INTERVAL_VAL = setInterval(Type, 150);
+}
+
 // Clicking on a hexagon adds the filled class
 $(document).on('click', '.hexagon', function(){
     this.classList.toggle('filled');
@@ -116,5 +266,6 @@ $(document).ready(function(){
     //Set all hexagons to a starting opacity
     setHexOpacity();
     randomFadeInOut();
+    typewriter();
 
 })

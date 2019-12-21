@@ -11,7 +11,21 @@
     <title>About Me</title>
 </head>
 <body>
+
+    <div id="follow"></div>
+
     <div class="main">
+
+        <!-- <img src="/static/images/AELogo.png" alt="Logo" id="AE_Logo"> -->
+
+        <div class="navbar">
+            <ul>
+                <li><a href="/about.html" id="about_button">About</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="#">Hobbies</a></li>
+                <li><a href="#">Resume</a></li>
+            </ul>
+        </div>
 
         <div class="media-links">
             <ul>
@@ -22,8 +36,16 @@
             </ul>
         </div>
 
+        <a href="mailto:alexander@ege.com" id="email">Alexander@Ege.com</a>
+
         <h2 id="name">Alexander Ege</h2>
-        <div style="width: 150px; height: 200px; background-color: red; margin: 0 auto;">Headshot Placeholder</div>
+        <img src="static/images/headshot01.png" alt="headshot" id="headshot">
+        <!-- <img src="static/images/headshot02.png" alt="headshot" id="headshot"> -->
+
+        <div id="container">
+            <div id="text"></div>
+        </div>
+
         <p id="about-paragraph">
             My name is <span class="highlight">Alexander Ege</span> and I am a <span class="highlight">Computer Engineer</span> working out of Orange County, CA.
             I attended Southern Illinois University Carbondale, where I earned my <span class="highlight">bachelors' of Science</span> in <span class="highlight">Computer Engineering</span>. 
@@ -33,6 +55,658 @@
         </p>
 
     </div>
+
+        <!-- Projects  -->
+        <div id="project-container">
+
+        <h1 class="title">Web Dev Projects</h1>
+
+        <div class="projects">
+
+            <div class="grid-container">
+                <div class="grid-item-title title1">Python/Django</div>
+                <div class="grid-item-title title2">C#/ASP.NET</div>
+                
+                <div class="grid-item project1">
+                    <div id="slicknotes" class="project" onclick="openProjectModal('slicknotes')">
+                        <h2>Slick Notes</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <div class="links">
+                            <a target="_blank" href="https://github.com/alexege/noteApp" onclick="event.stopPropagation()">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                            <i class="fab fa-aws"></i>
+                        </div>
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project2">
+                    <div id="blurread" class="project" onclick="openProjectModal('blurread')">
+                        <h2>BlurRead</h2>
+                        <img src="/static/images/BlurReadDashboard.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project3">
+                    <div id="activitytracker" class="project" onclick="openProjectModal('activitytracker')">
+                        <h2>ActivityTracker</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project4">
+                    <div id="hobbyHub" class="project" onclick="openProjectModal('hobbyhub')">
+                        <h2>Hobby Hub</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project5">
+                    <div id="weddingplanner" class="project" onclick="openProjectModal('weddingplanner')">
+                        <h2>Wedding Planner</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project6">
+                    <div id="weddingplanner" class="project" onclick="openProjectModal('weddingplanner')">
+                        <h2>Wedding Planner</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project7">
+                    <div id="weddingplanner" class="project" onclick="openProjectModal('weddingplanner')">
+                        <h2>Wedding Planner</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="grid-item project8">
+                    <div id="weddingplanner" class="project" onclick="openProjectModal('weddingplanner')">
+                        <h2>Wedding Planner</h2>
+                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <h2>Technologies:</h2>
+                        <ul>
+                            <li><i class="fab fa-python"></i>Python</li>
+                            <li><i class="far fa-window-maximize"></i>Django</li>
+                            <li><i class="fas fa-database"></i>SqlLite</li>
+                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal">
+
+                </div>
+                
+                <!-- SlickNotesNav -->
+                <div class="overlay" id="slicknotes_nav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('slicknotes')">&times;</a>
+                    <div class="overlay-content" onclick="closeNav('slicknotes')">
+                        <h1>Slick Notes</h1>
+                        <p>Slick Notes is a project I am using to document all my notes in one convenient place.</p>
+                        <a href=""><img src="css/images/SlickNotesFull01.png" alt=""></a>
+                        <a href=""><img src="css/images/SlickNotesFull02.png" alt=""></a>
+                        <p>Users may sign up to create their own notebooks with notes only accessible to them.</p>
+                        <p>I plan to one day integrate a sharing option that would allow quick and easy collaboration between note-takers.</p>
+                        <p>For now, users may create notes and categorize them as they wish.</p>
+                        <h2><a target="_blank" href="http://54.173.99.170/">Slick Notes Website</a></h2>
+                    </div>
+                </div>
+                
+                <!-- BlurRead -->
+                <div class="overlay" id="blurread_nav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('blurread')">&times;</a>
+                    <div class="overlay-content" onclick="closeNav('blurread')">
+                        <h1>BlurRead</h1>
+                        <p>BlurRead is a project I am using to document all my notes in one convenient place.</p>
+                        <a href=""><img src="css/images/SlickNotesFull01.png" alt=""></a>
+                        <a href=""><img src="css/images/SlickNotesFull02.png" alt=""></a>
+                        <p>Users may sign up to create their own notebooks with notes only accessible to them.</p>
+                        <p>I plan to one day integrate a sharing option that would allow quick and easy collaboration between note-takers.</p>
+                        <p>For now, users may create notes and categorize them as they wish.</p>
+                        <h2><a target="_blank" href="http://54.173.99.170/">Slick Notes Website</a></h2>
+                    </div>
+                </div>
+                
+                <!-- WeddingPlanner -->
+                <div class="overlay" id="weddingplanner_nav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('weddingplanner')">&times;</a>
+                    <div class="overlay-content" onclick="closeNav('weddingplanner')">
+                        <h1>WeddingPlanner</h1>
+                        <p>WeddingPlanner is a project I am using to document all my notes in one convenient place.</p>
+                        <a href=""><img src="css/images/SlickNotesFull01.png" alt=""></a>
+                        <a href=""><img src="css/images/SlickNotesFull02.png" alt=""></a>
+                        <p>Users may sign up to create their own notebooks with notes only accessible to them.</p>
+                        <p>I plan to one day integrate a sharing option that would allow quick and easy collaboration between note-takers.</p>
+                        <p>For now, users may create notes and categorize them as they wish.</p>
+                        <h2><a target="_blank" href="http://54.173.99.170/">Slick Notes Website</a></h2>
+                    </div>
+                </div>
+
+        </div> <!-- End of Projects-Container -->
+
+    </div>
+
+    <!-- Row 1 -->
+
+    <svg class="hexagon hex1 row1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- Row 2 -->
+
+    <svg class="hexagon hex2 row2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex3 row2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex4 row2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex5 row2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex6 row2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex7 row2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- Row 3 -->
+
+    <svg class="hexagon hex8 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex9 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex10 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex11 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex12 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex13 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex14 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex15 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex16 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex17 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex18 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex19 row3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- Row 4 -->
+
+    <svg class="hexagon hex20 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex21 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex22 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex23 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex24 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex25 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex26 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex27 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- <svg class="hexagon hex28 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg> -->
+
+    <svg class="hexagon hex29 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex30 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex31 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex32 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex33 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex34 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex35 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex36 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex37 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex38 row4" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- row 5 -->
+
+    <svg class="hexagon hex39 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex40 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex41 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex42 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex43 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex44 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex45 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex46 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex47 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex48 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex49 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex50 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex51 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex52 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex53 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex54 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex55 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex56 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex57 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex58 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex59 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex60 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex61 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex62 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- <svg class="hexagon hex63 row5" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg> -->
+
+    <!-- Row 6 -->
+
+    <svg class="hexagon hex64 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex65 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex66 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex67 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex68 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex69 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex70 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex71 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex72 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex73 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex74 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex75 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex76 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex77 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex78 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex79 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex80 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex81 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex82 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex83 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex84 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex85 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex86 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex87 row6" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- Row 7 -->
+
+    <svg class="hexagon hex88 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex89 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex90 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex91 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex92 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex93 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex94 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex95 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex96 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex97 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex98 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex99 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex100 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex101 row7" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <!-- Row 8 -->
+
+    <svg class="hexagon hex102 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex103 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex104 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex105 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex106 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex107 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex108 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex109 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex110 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex111 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex112 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
+    <svg class="hexagon hex113 row8" xmlns="http://www.w3.org/2000/svg" version="1.1" width="200" height="175" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <polygon class="hex" points="50,0 0,87.5 50,175 150,175 200,87.5 150,00"></polygon>
+    </svg>
+
 
     <div id="corner-bottom-left"></div>
     <div id="corner-bottom-right"></div>

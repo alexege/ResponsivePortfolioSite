@@ -32,7 +32,6 @@ $(document).on('mouseenter', 'a', function(e){
 
     captureMousePosition(e);
 
-
     console.log("Mouse positionX: ", e.clientX);
     console.log("Mouse positionY: ", e.clientY);
 

@@ -171,14 +171,23 @@ body {
     margin: 0 auto;
     overflow: hidden;
     max-width: 800px;
-    padding: 1rem;
+    padding: 1rem 3rem;
     line-height: 2rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    /* border: 2px solid #0ffbf9; */
+    border: 3px solid white;
     background-color: #06abe262;
-    box-shadow: 0px 0px 30px #06abe262;
+    /* box-shadow: 0px 0px 30px #06abe262; */
+    box-shadow: 0px 0px 15px 5px #06aae2;
+}
+
+#about-paragraph-div {
+    position: absolute;
+    border: 4px solid white;
+    min-height: 100px;
+    transform: rotate(10deg);
+    padding: 10px;
 }
 
 .highlight {
@@ -262,6 +271,40 @@ body {
     z-index: -1;
     left: 2rem;
     top: 2rem;
+}
+
+#about-paragraph-div {
+    position: relative;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#whiteSquareLeft {
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    width: 300px;
+    border-left: 4px solid white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#whiteSquareRight {
+    position: absolute;
+    z-index: 3;
+    margin-left: 200px;
+    height: 100px;
+    width: 300px;
+    border-right: 4px solid white;
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#floatText {
+    position: absolute;
+    color: white;
+    font-size: 48px;
+    z-index: 2;
 }
 
 #corner-top-left, #corner-top-right, #corner-bottom-left, #corner-bottom-right {
@@ -415,6 +458,7 @@ body {
 
 /* Project Modals  */
 .overlay {
+    color: white;
     height: 100%;
     width: 0;
     position: fixed;
@@ -434,6 +478,10 @@ body {
     width: 100%;
     text-align: center;
     margin-top: 30px;
+  }
+
+  .overlay h1 {
+      color: #06aae2;
   }
   
   .overlay a {

@@ -38,7 +38,7 @@ body {
     color: white;
     text-align: center;
     font-size: 3rem;
-    margin-bottom: 3rem;
+    margin: 3rem 0;
 }
 
 /* Footer  */
@@ -399,6 +399,10 @@ body {
     cursor: pointer;
 }
 
+.grid-item h2 {
+    margin: 0.75rem;
+}
+
 .grid-item .description {
     margin: 1rem;
 }
@@ -428,10 +432,6 @@ body {
 
 .projects i:hover {
     color: cyan;
-}
-
-.grid-item h2 {
-    color: #0ffbf9;
 }
 
 .grid-item ul li {
@@ -522,6 +522,119 @@ body {
 /* Play Page */
 
 /* Resume Page */
+
+#Resume-Container {
+    max-width: 80vw;
+    border: 1px solid #06aae2;
+    background-color: #06abe262;
+    color: white;
+    padding: 1rem;
+    /* font-family: sans-serif; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#Resume-Container h4 {
+    color: #06aae2;
+    padding: 0.5rem;
+}
+
+#Resume-Container li {
+    margin-left: 40px;
+}
+
+#Resume-Container a {
+    text-decoration: none;
+    color: #06aae2;
+}
+
+.resume-intro {
+    text-align: center;
+}
+
+#resume-links {
+    margin: 0 auto;
+}
+
+#resume-links a {
+    text-decoration: none;
+    color: white;
+}
+
+#resume-links i {
+    margin-right: 0.5rem;
+}
+
+.resume-link {
+    display: inline-block;
+    margin: 1rem;
+}
+
+#dojo-container {
+    max-width: 80vw;
+    text-align: center;
+    color: white;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.column h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #06aae2;
+    font-weight: 100;
+    border-bottom: 2px solid white;
+    margin: 1rem;
+}
+
+/* #summary {
+    width: 100%;
+    text-align: center;
+} */
+
+#technologies {
+    /* width: 40%; */
+    /* height: 100%; */
+    display: inline-block;
+    vertical-align: top;
+    padding: 1rem;
+}
+
+.date {
+    float: right;
+    color: #06aae2;
+    font-weight: bold;
+}
+
+#experience {
+    width: 60%;
+    height: 100%;
+    display: inline-block;
+    outline: 1px solid red;
+}
+
+#github {
+    color: white;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: #06abe262;
+    padding: 1rem;
+}
+
+/* Skills */
+#skills-container {
+    width: 80vw;
+}
 
 /* Hexagon Positions */
 /* Ring 1 */
@@ -1311,4 +1424,121 @@ body {
         'project1 project2 project3 project4'
         'project5 project6 project7 project8'
         }
+}
+
+
+
+
+/* Futuristic Menu */
+.all {
+    display: flex;
+    perspective: 10px;
+    transform: perspective(300px) rotateX(20deg);
+    will-change: perspective;
+    perspective-origin: center center;
+    transition: all 1.3s ease-out;
+    justify-content: center;
+    transform-style: preserve-3d;
+    border: none;
+}
+.all:hover {
+    perspective: 1000px;
+    transition: all 1.3s ease-in;
+    transform: perspective(10000px) rotateX(0deg);
+}
+.all:hover .text {
+    opacity: 1;
+}
+.all:hover > div {
+    opacity: 1;
+    transition-delay: 0s;
+}
+.all:hover .explainer {
+    opacity: 0;
+}
+.left, .center, .right, .far-left, .far-right {
+    width: 200px;
+    height: 150px;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    /* box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4); */
+    opacity: 0;
+    transition: all 0.3s ease;
+    transition-delay: 1s;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: #58d; */
+    background-color: white;
+    background-color: transparent;
+    cursor: pointer;
+    background-blend-mode: color-burn;
+}
+.left:hover, .center:hover, .right:hover, .far-left:hover, .far-right:hover {
+    box-shadow: 0 0 30px 10px rgba(24, 153, 240, 0.6);
+    /* background-color: #ccf; */
+    /* background-color: lime; */
+}
+.text {
+    text-align: center;
+    width: 100%;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    bottom: 0;
+    left: 5px;
+    position: absolute;
+    will-change: transform;
+    color: #fff;
+    /* text-shadow: 0 0 5px rgba(100, 100, 255, .6); */
+    text-shadow: 0 0 5px #1266e499;
+}
+.far-left {
+    transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+}
+.left {
+    transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+}
+.center {
+    opacity: 1;
+}
+.right {
+    transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+}
+.far-right {
+    transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+}
+.explainer {
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+    transition: all 0.6s ease;
+    width: 100%;
+    height: 100%;
+    /* background-color: #303050; */
+    background-color: white;
+    /* border-radius: 10px; */
+    text-shadow: 0 0 10px rgba(255, 255, 255, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.ref {
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #d80, #c00);
+    border-radius: 3px;
+    padding: 7px 10px;
+    position: absolute;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .4);
+}
+.ref::first-letter {
+    font-size: 12px;
 }

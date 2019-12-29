@@ -28,6 +28,14 @@ function captureMousePosition(event){
     // console.log("x = " + xMousePos + " y = " + yMousePos);
 }
 
+var boxes = document.getElementsByClassName('education-box');
+console.log("Boxes:", boxes);
+
+$(document).on('mouseenter', '.education-box', function(e){
+    var category = this.getAttribute('category');
+    console.log("category:", category);
+})
+
 $(document).on('mouseenter', 'a', function(e){
 
     captureMousePosition(e);
@@ -125,6 +133,7 @@ $(document).on('mouseover', '.hexagon', function(){
 function randomFadeInOut(){
     setInterval(function(){
         var random_hex_id = parseInt(Math.random()*113);
+        console.log("Random number: ", random_hex_id);
         document.getElementsByClassName(`hex${random_hex_id}`)[0].classList.toggle('fade');
     }, 500);
 }

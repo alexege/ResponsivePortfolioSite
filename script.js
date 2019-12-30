@@ -275,5 +275,4 @@ $(document).ready(function(){
     setHexOpacity();
     randomFadeInOut();
     typewriter();
-
 })

@@ -97,7 +97,7 @@ body {
 }
 
 .fade {
-    animation: heartBeat 4s ease-in-out;
+    animation: heartBeat 3s ease-in-out;
 }
 
 @keyframes heartBeat {
@@ -138,8 +138,10 @@ body {
     text-align: center;
     /* position: absolute; */
     font-size: 4em;
+    font-size: 6em;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 3px 0px 5px #2A98FF, 5px 0px 1px white;
 }
 
 #headshot {
@@ -151,6 +153,16 @@ body {
     background-color: #0ffbf732;
     background-color: #06abe262;
     transition: all 1s;
+}
+
+#headshot:hover {
+    background-color: white;
+    transform: scale(1.1);
+}
+
+#headshotbox {
+    display: block;
+    position: relative;
 }
 
 #email {
@@ -176,10 +188,18 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1rem;
     font-weight: bold;
-    border: 3px solid white;
+    border: 1px solid white;
     background-color: #06abe262;
     /* box-shadow: 0px 0px 30px #06abe262; */
-    box-shadow: 0px 0px 15px 5px #06aae2;
+    /* box-shadow: 0px 0px 15px 5px #06aae2; */
+}
+
+#about-paragraph:hover {
+    border-radius: 5px;
+    background-color: #06abe244;
+    transition: border-radius 2s;
+    transform: scale(1.1);
+    transition: transform 2s;
 }
 
 #about-paragraph-div {
@@ -538,7 +558,7 @@ body {
     padding: 0.5rem;
 }
 
-#Resume-Container li {
+#Resume-Container li, #Resume-Container p {
     margin-left: 40px;
 }
 

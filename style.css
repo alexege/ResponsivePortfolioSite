@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Header  */
 .main {
     height: 100vh;
@@ -589,12 +593,6 @@ body {
     margin: 1rem;
 }
 
-#dojo-container {
-    max-width: 80vw;
-    text-align: center;
-    color: white;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -654,7 +652,15 @@ body {
 /* Skills */
 #skills-container {
     width: 80vw;
-    margin: 3rem 0;
+    /* margin: 3rem 0; */
+}
+
+/* Contact  */
+#contact-container {
+    background-color: #06abe262;
+    padding: 2rem;
+    color: white;
+    text-align: center;
 }
 
 /* Hexagon Positions */
@@ -1577,8 +1583,14 @@ body {
 .info {
     color: white;
     display: none;
+    background-color: #06abe262;
+    padding: 2rem;
 }
 
 .active_edu {
     border: 2px solid yellow;
+}
+
+.visible {
+    display: block;
 }

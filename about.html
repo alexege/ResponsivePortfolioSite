@@ -19,10 +19,12 @@
 
         <div class="navbar">
             <ul>
-                <li><a href="/about.html" id="about_button">About</a></li>
-                <li><a href="/projects.html">Projects</a></li>
-                <li><a href="#">Hobbies</a></li>
-                <li><a href="#">Resume</a></li>
+                <li><a href="#about-container" id="about_button">About</a></li>
+                <li><a href="#project-container">Projects</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#Resume-Container">Resume</a></li>
+                <li><a href="#skills-container">Skills</a></li>
+                <li><a href="#contact-container">Contact</a></li>
             </ul>
         </div>
 
@@ -425,10 +427,10 @@
             </div>
 
         </div>
+
+        <h1 class="title">Skills</h1>
            
         <div id="skills-container">
-
-            <h2>Skills</h2>
 
             <div class="all">
                 <div class="far-left education-box" category='webfunds'>
@@ -454,42 +456,133 @@
                 </div>
                 </div>
 
+                <div id="dojo_content" class="info visible" style="text-align: center;">
+                    <h1>Coding Dojo</h1>
+                    <p>I attended the Coding Dojo bootcamp in May 2019 and began working there as a Teaching Assistant in September.</p>
+                    <p>The bootcamp covered the following stacks:</p>
+                    <ul>
+                        <li>Python with Django and Flask</li>
+                        <li>JavaScript with M.E.A.N</li>
+                        <li>CSharp with ASP.NET Core</li>
+                    </ul>
+                    <p>I graduated the coding bootcamp with a tripple blackbelt. This means for each stack, I was able to build a full stack application from scratch and have it deployed in a 5 hour window.</p>
+                    
+                    <a target="_blank" href="/static/images/dojo-diploma.png">
+                        <img src="/static/images/dojo-diploma.png" alt="" style="width: 48%; display: inline-block;">
+                    </a>
+                    <a target="_blank" href="/static/images/LetterOfRecommendation.png">
+                        <img src="/static/images/LetterOfRecommendation.png" alt="" style="width: 48%; display: inline-block;">
+                    </a>
+                </div>
+
                 <div id="webfunds_content" class="info">
-                    Webfunds Description
+                    <h3>HTML</h3>
+                    <ul>
+                        <li>Hypertext Markup Language is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</li>
+                    </ul>
+                    <h3>CSS</h3>
+                    <ul>
+                        <li>Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.</li>
+                    </ul>
+                    <h3>JavaScript</h3>
+                    <ul>
+                        <li>JavaScript, often abbreviated as JS, is a high-level, interpreted scripting language that conforms to the ECMAScript specification. JavaScript has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</li>
+                    </ul>
+                    <h3>JQuery</h3>
+                    <ul>
+                        <li>jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10 million most popular websites.</li>
+                    </ul>
                 </div>
                 
                 <div id="python_content" class="info">
-                    python Description
+                    <p>Our python stack involved learning about Flask, Django, and SQL.</p>
+                    <h3>Flask</h3>
+                    <ul>
+                        <li>Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.</li>
+                        <li>This was our first introduction to doing CRUD applications using any kind of framework.</li>
+                    </ul>
+                    <h3>Django</h3>
+                    <ul>
+                        <li>Django is a Python-based free and open-source web framework, which follows the model-template-view architectural pattern. It is maintained by the Django Software Foundation, an independent organization established as a 501 non-profit. Django's primary goal is to ease the creation of complex, database-driven websites.</li>
+                        <li>Django was our first professional level framework where we put our CRUD knowledge to the ultimate test.</li>
+                    </ul>
+                    <h3>SQL</h3>
+                    <ul>
+                        <li>SQLite is a relational database management system contained in a C library. In contrast to many other database management systems, SQLite is not a client–server database engine. Rather, it is embedded into the end program.</li>
+                        <li>For our first database, </li>
+                    </ul>
                 </div>
                 
                 <div id="mean_content" class="info">
-                    mean Description
+                    <h3>Mongo</h3>
+                    <ul>
+                        <li>MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema. MongoDB is developed by MongoDB Inc.</li>
+                    </ul>
+                    <h3>Express</h3>
+                    <ul>
+                        <li>Express.js, or simply Express, is a web application framework for Node.js, released as free and open-source software under the MIT License. It is designed for building web applications and APIs. It has been called the de facto standard server framework for Node.js.</li>
+                    </ul>
+                    <h3>Angular</h3>
+                    <ul>
+                        <li>Angular is a TypeScript-based open-source web application framework led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.</li>
+                    </ul>
+                    <h3>Node</h3>
+                    <ul>
+                        <li>Node.js is primarily used for non-blocking, event-driven servers, due to its single-threaded nature. It's used for traditional web sites and back-end API services, but was designed with real-time, push-based architectures in mind.</li>
+                    </ul>
                 </div>
                 
                 <div id="csharp_content" class="info">
-                    csharp Description
+                    <p>Our C# ASP.NET Stack started out with the fundamentals of Object Oriented Programming. We took what we learned in OOP and applied it to our web apps using ASP.NET and Visual Studio.</p>
+
+                    <h3>ASP.NET</h3>
+                    <ul>
+                        <li>.NET is a developer platform made up of tools, programming languages, and libraries for building many different types of applications.</li>
+                        <li>ASP.NET extends the .NET developer platform with tools and libraries specifically for building web apps.</li>
+                    </ul>
+                    <!-- <h3>Classes</h3> -->
+                    <h3>Object Oriented Programming</h3>
+                    <ul>
+                        <li>Inheritance</li>
+                        <li>Polymorphism</li>
+                        <li>Encapsulation</li>
+                        <li>Abstraction</li>
+                    </ul>
+                    <p></p>
+                    <h3>MySQL</h3>
+                    <ul>
+                        <li>MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language.</li>
+                    </ul>
                 </div>
 
-                <div style="width: 100%; text-align: center;">
+                <!-- <div style="width: 100%; text-align: center;">
                     <img src="/static/images/dojo-diploma.png" alt="" style="width: 45%; display: inline-block;">
                     <img src="/static/images/LetterOfRecommendation.png" alt="" style="width: 45%; display: inline-block;">
-                </div>
+                </div> -->
 
         </div>
 
-        <div id="dojo-container">
-            <h1>Coding Dojo</h1>
-            <p>I attended the Coding Dojo bootcamp in May 2019 and began working there as a Teaching Assistant in September.</p>
-            <p>The bootcamp covered the following stacks:</p>
-            <ul>
-                <li>Python with Django and Flask</li>
-                <li>JavaScript with M.E.A.N</li>
-                <li>CSharp with ASP.NET Core</li>
-            </ul>
-            <!-- <img src="/static/images/CSharp.png" alt="">
-            <img src="/static/images/Mean.png" alt="">
-            <img src="/static/images/Python.png" alt="">
-            <img src="/static/images/WebFunds.png" alt=""> -->
+        <h1 class="title">Contact Me</h1>
+
+        <div id="contact-container">
+            <form action="https://formspree.io/xvozvdwz" method="POST">
+            <label>
+              Your Name:
+              <input type="text" name="name">
+            </label><br>
+            <label>
+              Your email:
+              <input type="text" name="email">
+            </label><br>
+            <label>
+              Your message:
+              <textarea name="message"></textarea>
+            </label><br>
+          
+            <!-- your other form fields go here -->
+          
+            <button type="submit">Send</button>
+          </form>
         </div>
 
         </div>

@@ -37,7 +37,8 @@ var category = 'dojo';
 $(document).on('mouseenter', '.education-box', function(e){
     category = this.getAttribute('category');
     console.log("category:", category);
-    document.getElementById(`${category}_content`).style.display = "block";
+
+    // document.getElementById(`${category}_content`).style.display = "block";
     current_educationbox = `${category}_content`;
 })
 
@@ -55,7 +56,16 @@ $(document).on('click', '.education-box', function(e){
             list_of_active[i].classList.toggle('active_edu');
         }
     }
-    // document.getElementById(current_educationbox).style.border = '2px solid yellow';
+    var list_of_visible = document.getElementById('skills-container').querySelectorAll('.info');
+    for(var i = 0; i < list_of_visible.length; i++){
+        console.log("Items:", list_of_visible[i]);
+        if(list_of_visible[i].classList.contains('visible')){
+            console.log("Visible found");
+            list_of_visible[i].classList.toggle('visible');
+        }
+    }
+    // document.getElementById(current_educationbox).style.display = 'block';
+    document.getElementById(`${category}_content`).classList.toggle('visible');
     console.log("list of active: ", list_of_active);
 });
 
@@ -298,3 +308,24 @@ $(document).ready(function(){
     randomFadeInOut();
     typewriter();
 })
+
+// Smooth Scrolling
+// // Scroll to specific values
+// // scrollTo is the same
+// window.scroll({
+//     top: 2500, 
+//     left: 0, 
+//     behavior: 'smooth'
+//   });
+  
+//   // Scroll certain amounts from current position 
+//   window.scrollBy({ 
+//     top: 100, // could be negative value
+//     left: 0, 
+//     behavior: 'smooth' 
+//   });
+  
+//   // Scroll to a certain element
+//   document.querySelector('.hello').scrollIntoView({ 
+//     behavior: 'smooth' 
+//   });

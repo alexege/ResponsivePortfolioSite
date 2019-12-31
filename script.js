@@ -31,10 +31,33 @@ function captureMousePosition(event){
 var boxes = document.getElementsByClassName('education-box');
 console.log("Boxes:", boxes);
 
+var current_educationbox = 'dojo';
+var category = 'dojo';
+
 $(document).on('mouseenter', '.education-box', function(e){
-    var category = this.getAttribute('category');
+    category = this.getAttribute('category');
     console.log("category:", category);
+    document.getElementById(`${category}_content`).style.display = "block";
+    current_educationbox = `${category}_content`;
 })
+
+$(document).on('mouseleave', '.education-box', function(e){
+    console.log('current:', current_educationbox);
+});
+
+$(document).on('click', '.education-box', function(e){
+    this.classList.toggle('active_edu');
+    // this.style.border = "2px solid red";
+    var list_of_active = document.getElementById('skills-container').querySelectorAll('.active_edu');
+    for(var i = 0; i < list_of_active.length; i++){
+        console.log("item:", list_of_active[i]);
+        if(list_of_active[i].getAttribute('category') != category){
+            list_of_active[i].classList.toggle('active_edu');
+        }
+    }
+    // document.getElementById(current_educationbox).style.border = '2px solid yellow';
+    console.log("list of active: ", list_of_active);
+});
 
 $(document).on('mouseenter', 'a', function(e){
 
@@ -133,7 +156,6 @@ $(document).on('mouseover', '.hexagon', function(){
 function randomFadeInOut(){
     setInterval(function(){
         var random_hex_id = parseInt(Math.random()*113);
-        console.log("Random number: ", random_hex_id);
         document.getElementsByClassName(`hex${random_hex_id}`)[0].classList.toggle('fade');
     }, 500);
 }

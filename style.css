@@ -654,6 +654,7 @@ body {
 /* Skills */
 #skills-container {
     width: 80vw;
+    margin: 3rem 0;
 }
 
 /* Hexagon Positions */
@@ -1460,6 +1461,7 @@ body {
     justify-content: center;
     transform-style: preserve-3d;
     border: none;
+    margin-bottom: 3rem;
 }
 .all:hover {
     perspective: 1000px;
@@ -1480,7 +1482,8 @@ body {
     width: 200px;
     height: 150px;
     transform-style: preserve-3d;
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border-radius: 5px;
     border: 1px solid #fff;
     /* box-shadow: 0 0 20px 5px rgba(100, 100, 255, .4); */
     opacity: 0;
@@ -1490,16 +1493,13 @@ body {
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-color: #58d; */
-    background-color: white;
-    background-color: transparent;
     cursor: pointer;
     background-blend-mode: color-burn;
+    border: 1px solid #06aae2;
 }
 .left:hover, .center:hover, .right:hover, .far-left:hover, .far-right:hover {
-    box-shadow: 0 0 30px 10px rgba(24, 153, 240, 0.6);
-    /* background-color: #ccf; */
-    /* background-color: lime; */
+    box-shadow: 0 0 30px 5px rgba(24, 153, 240, 0.6);
+    /* background-color: rgba(24, 153, 240, 0.25); */
 }
 .text {
     text-align: center;
@@ -1517,28 +1517,39 @@ body {
 }
 .far-left {
     transform: translateX(-60px) translateZ(-50px) rotateY(-10deg);
+    background: url('/static/images/WebFunds.png') center center no-repeat;
+    background-size: 80%;
 }
 .left {
     transform: translateX(-30px) translateZ(-25px) rotateY(-5deg);
+    background: url('/static/images/Python.png') center center no-repeat;
+    background-size: 80%;
 }
 .center {
     opacity: 1;
+    background-color: transparent;
+    background: url('/static/images/coding-dojo.png') center center no-repeat;
+    background-size: 80%;
 }
 .right {
     transform: translateX(30px) translateZ(-25px) rotateY(5deg);
+    background: url('/static/images/Mean.png') center center no-repeat;
+    background-size: 80%;
 }
 .far-right {
     transform: translateX(60px) translateZ(-50px) rotateY(10deg);
+    background: url('/static/images/CSharp.png') center center no-repeat;
+    background-size: 80%;
 }
 .explainer {
     font-weight: 300;
     font-size: 2rem;
-    color: #fff;
+    color: black;
     transition: all 0.6s ease;
     width: 100%;
     height: 100%;
     /* background-color: #303050; */
-    background-color: white;
+    background-color: transparent;
     /* border-radius: 10px; */
     text-shadow: 0 0 10px rgba(255, 255, 255, .8);
     display: flex;
@@ -1561,4 +1572,13 @@ body {
 }
 .ref::first-letter {
     font-size: 12px;
+}
+
+.info {
+    color: white;
+    display: none;
+}
+
+.active_edu {
+    border: 2px solid yellow;
 }

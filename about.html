@@ -8,12 +8,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="script.js"></script>
     <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet">
-    <title>About Me</title>
+    <title>Alexander Ege</title>
 </head>
 <body>
 
-    <div id="follow"></div>
+    <button onclick="scrollToTop()" id="topButton" title="Scroll to top"><i class="fas fa-arrow-circle-up"></i> Top</button>
 
+    <div id="follow"></div>
 
         <!-- <img src="/static/images/AELogo.png" alt="Logo" id="AE_Logo"> -->
 
@@ -21,7 +22,7 @@
             <ul>
                 <li><a href="#about-container" id="about_button">About</a></li>
                 <li><a href="#project-container">Projects</a></li>
-                <li><a href="#hobbies">Hobbies</a></li>
+                <!-- <li><a href="#hobbies-container">Hobbies</a></li> -->
                 <li><a href="#Resume-Container">Resume</a></li>
                 <li><a href="#skills-container">Skills</a></li>
                 <li><a href="#contact-container">Contact</a></li>
@@ -42,18 +43,26 @@
         <h2 id="name">Alexander Ege</h2>
         
         <div id="headshotbox">
+            <!-- <div class="diamondShape"></div>
+            <div class="diamondShape2"></div>
+            <div class="diamondShape3"></div>
+            <div class="diamondShape4"></div>
+            <div class="diamondShape4_1"></div>
+            <div class="diamondShape5"></div>
+            <div class="diamondShape6"></div>
+            <div class="diamondShape7"></div>
+            <div class="diamondShape8"></div> -->
+            <div class="animatedSquare"></div>
+            <div class="animatedSquare2"></div>
+            <div class="animatedSquare3"></div>
+            <div class="animatedSquare4"></div>
+
             <img src="static/images/headshot01.png" alt="headshot" id="headshot">
         </div>
                     
         <div id="container">
             <div id="text"></div>
         </div>
-
-        <!-- <div id="about-paragraph-div">
-        </div> -->
-        <!-- <div id="whiteSquareLeft"></div>
-        <div id="whiteSquareRight"></div>
-        <h4 id="floatText">Alexander Ege</h4> -->
 
         <p id="about-paragraph">
             My name is <span class="highlight">Alexander Ege</span> and I am a <span class="highlight">Computer Engineer</span> working out of Orange County, CA.
@@ -79,7 +88,7 @@
                 <div class="grid-item project1">
                     <div id="slicknotes" class="project" onclick="openProjectModal('slicknotes')">
                         <h2>Slick Notes</h2>
-                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <img src="/static/images/SlickNotes/SlickNotesHome.png" alt="SlickNotes">
                         <div class="links">
                             <a target="_blank" href="https://github.com/alexege/noteApp" onclick="event.stopPropagation()">
                                 <i class="fab fa-github-square"></i>
@@ -99,7 +108,7 @@
                 <div class="grid-item project2">
                     <div id="blurread" class="project" onclick="openProjectModal('blurread')">
                         <h2>BlurRead</h2>
-                        <img src="/static/images/BlurReadDashboard.png" alt="SlickNotes">
+                        <img src="/static/images/BlurRead/BlurReadHome.png" alt="BlurRead">
                         <p class="description">BlurRead is an anonymous social media site. The goal being to stay anonymous, users will be assigned a random strig of characters as a username. Positive posts wil have a blue hue, while negative will be in red.</p>
                         <h2>Technologies:</h2>
                         <ul>
@@ -111,30 +120,38 @@
                     </div>
                 </div>
                 <div class="grid-item project3">
-                    <div id="activitytracker" class="project" onclick="openProjectModal('activitytracker')">
+                    <div id="activityTracker" class="project" onclick="openProjectModal('activityTracker')">
                         <h2>ActivityTracker</h2>
-                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
-                        <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
+                        <img src="/static/images/ActivityTracker/ActivityTrackerHome.png" alt="SlickNotes">
+                        <div class="links">
+                            <a target="_blank" href="https://github.com/alexege/ActivityTracker" onclick="event.stopPropagation()">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </div>
+                        <p class="description">Activity Tracker is an app used to track your activities. A user can schedule an activity and post it. Other users can then join the activity. Activities will be displayed in order of date/time with the most recent on top.</p>
                         <h2>Technologies:</h2>
                         <ul>
-                            <li><i class="fab fa-python"></i>Python</li>
-                            <li><i class="far fa-window-maximize"></i>Django</li>
-                            <li><i class="fas fa-database"></i>SqlLite</li>
-                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                            <li><i class="fab fa-windows"></i>CSharp</li>
+                            <li><i class="fas fa-globe"></i>ASP.NET</li>
+                            <li><i class="fas fa-database"></i>MySQL</li>
                         </ul>
                     </div>
                 </div>
                 <div class="grid-item project4">
                     <div id="hobbyHub" class="project" onclick="openProjectModal('hobbyhub')">
                         <h2>Hobby Hub</h2>
-                        <img src="/static/images/SlickNotesHome.png" alt="SlickNotes">
+                        <img src="/static/images/HobbyHub/HobbyHubHome.png" alt="SlickNotes">
+                        <div class="links">
+                            <a target="_blank" href="https://github.com/alexege/HobbyHub" onclick="event.stopPropagation()">
+                                <i class="fab fa-github-square"></i>
+                            </a>
+                        </div>
                         <p class="description">Slick Notes is a note-taking app which allows users to have all their notes in one convenient location. Create new notebooks and categories and organize your notes to your preference on the fly.</p>
                         <h2>Technologies:</h2>
                         <ul>
-                            <li><i class="fab fa-python"></i>Python</li>
-                            <li><i class="far fa-window-maximize"></i>Django</li>
-                            <li><i class="fas fa-database"></i>SqlLite</li>
-                            <li><i class="fas fa-sync-alt"></i>Ajax</li>
+                            <li><i class="fab fa-windows"></i>CSharp</li>
+                            <li><i class="fas fa-globe"></i>ASP.NET</li>
+                            <li><i class="fas fa-database"></i>MySQL</li>
                         </ul>
                     </div>
                 </div>
@@ -203,42 +220,55 @@
                 <div class="overlay" id="slicknotes_nav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav('slicknotes')">&times;</a>
                     <div class="overlay-content" onclick="closeNav('slicknotes')">
-                        <h1>Slick Notes</h1>
-                        <p>Slick Notes is a note taking app built in Django. The goal of this project is to allow the end user to document anything they wish in one convenient place.</p>
-                        <a href=""><img src="css/images/SlickNotesFull01.png" alt=""></a>
-                        <a href=""><img src="css/images/SlickNotesFull02.png" alt=""></a>
-                        <p>Users may sign up to create their own notebooks with notes only accessible to them.</p>
-                        <p>I plan to one day integrate a sharing option that would allow quick and easy collaboration between note-takers.</p>
-                        <p>For now, users may create notes and categorize them as they wish.</p>
-
-                        <h3>Features</h3>
-                        <ul>
-                            <li>Ability to add Category</li>
-                            <li>Add Note</li>
-                            <li>Add Comment
-                                <ul>
-                                    <li>Add plaintext comment</li>
-                                    <li>Add code snippet</li>
-                                    <li>Add image</li>
-                                    <li>Add pdf</li>
-                                    <li>Add video</li>
-                                </ul>
-                            </li>
-                            <li>Search for specific note or content</li>
-                            <li>Drag and Drop abilities for both notes/notebooks</li>
-                            <li>
-                                Toggle publicity of each category.
-                            </li>
-                        </ul>
-
-                        <p>Drag and drop notes as well as categories</p>
-                        
-                        <h2>Back Story</h2>
-                        <p>I started this app with a simple goal.
-                            I quickly found I wanted to add the ability to do everything without
-                            refreshing the page. Once I figured out how to do that, I had to apply
-                            that to each function of this project.
+                        <h1 class="heading">Slick Notes</h1>
+                        <p class="summary">Slick Notes is a note taking app built in Django. The goal of this project is to allow the end user to document anything they wish in one convenient place.
+                            Users can create notebooks with categories to classify their notes. Once created, a notebook can be made public and shared with the community.
                         </p>
+                        <div style="display: inline-block; width: 40%;">
+                            <a target="_blank" href="static/images/SlickNotes/SlickNotesHome.png"><img src="static/images/SlickNotes/SlickNotesHome.png" alt="HomePage"></a>
+                            <p>User has the option to login with an existing account or login as guest.</p>
+                        </div>
+                        <div style="display: inline-block; width: 40%;">
+                            <a target="_blank" href="static/images/SlickNotes/SlickNotesHomePageReg.png"><img src="static/images/SlickNotes/SlickNotesHomePageReg.png" alt="HomePage"></a>
+                            <p>User can register a new account.</p>
+                        </div>
+                        <div style="width: 80%; margin: 0 auto; margin-top: 2rem;">
+                            <a target="_blank" href="static/images/SlickNotes/SlickNotesDashboard.png"><img src="static/images/SlickNotes/SlickNotesDashboard.png" alt="Dashboard"></a>
+                            <p>I have implemented a share option that would allow quick and easy collaboration between note-takers.</p>
+                            <p>Users may create notes and categorize them as they wish.</p>
+                        </div>
+
+                        <h3 class="heading">Features</h3>
+                        <div id="features">
+
+                            <ol style="text-align: left;">
+                                <li>Add a Notebook</li>
+                                <li>Add a Category</li>
+                                <li>Add a Note</li>
+                                <li>Add a Comment
+                                    <ul>
+                                        <li>Add plaintext comment</li>
+                                        <li>Add code snippet</li>
+                                        <li>Add image</li>
+                                        <li>Add pdf</li>
+                                        <li>Add video</li>
+                                    </ul>
+                                </li>
+                                <li>SearchBar: Search for specific note or content</li>
+                                <li>Drag and Drop functionality for both notes/notebooks</li>
+                                <li>Toggle publicity of each category.</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="summary">
+                            <h2 class="heading">Summary:</h2>
+                            <p>I started this app with a simple goal: create a simple note taking app that I would actually use.
+                                I quickly found I wanted to add the ability to do everything without
+                                refreshing the page. Once I figured out how to do that, I had to apply
+                                that to each function of this project. You will notice the app updates instantaneously avoiding all page reloads.
+                                This was acheived using Ajax and could also be done by implementing a front-end framework which I plan to do in the future.
+                            </p>
+                        </div>
 
                         <h2><a target="_blank" href="http://54.173.99.170/">Slick Notes Website</a></h2>
                     </div>
@@ -248,38 +278,173 @@
                 <div class="overlay" id="blurread_nav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav('blurread')">&times;</a>
                     <div class="overlay-content" onclick="closeNav('blurread')">
-                        <h1>BlurRead</h1>
-                        <p>BlurRead is a project I am using to document all my notes in one convenient place.</p>
-                        <a href=""><img src="css/images/SlickNotesFull01.png" alt=""></a>
-                        <a href=""><img src="css/images/SlickNotesFull02.png" alt=""></a>
-                        <p>Users may sign up to create their own notebooks with notes only accessible to them.</p>
-                        <p>I plan to one day integrate a sharing option that would allow quick and easy collaboration between note-takers.</p>
-                        <p>For now, users may create notes and categorize them as they wish.</p>
-                        <h2><a target="_blank" href="http://54.173.99.170/">Slick Notes Website</a></h2>
+                        <h1 class="heading">Blur Read</h1>
+                        <p class="summary">Blur Read is an anonymous social media platform designed to allow users to speak thier mind without feare of ridicule or criticism.
+                            This project utilizes a random character generator to create unique strings which stand in for traditional usernames to keep the end user anonymous.
+                            Users will start off with a generic icon associated with thier account. As their posts gain traction, they will unlock new tiers, each with their own custom icon.
+                            If a user reaches a specific popularity level, they will be granted the ability to disclose who they are with thier own custom username.
+                        </p>
+                        <div style="display: inline-block; width: 80%;">
+                            <a target="_blank" href="static/images/BlurRead/BlurReadHome.png"><img src="static/images/BlurRead/BlurReadHome.png" alt="HomePage"></a>
+                            <p>Standard user login with validation.</p>
+                        </div>
+                        <div style="width: 80%; margin: 0 auto; margin-top: 2rem;">
+                            <a target="_blank" href="static/images/BlurRead/BlurReadDashboard.png"><img src="static/images/BlurRead/BlurReadDashboard.png" alt="HomePage"></a>
+                            <p>This is the dashboard. This is where users will be able to see their feed.</p>
+                        </div>
+
+                        <h3 class="heading">Features</h3>
+                        <div id="features">
+
+                            <ol style="text-align: left;">
+                                <li>Add a new post</li>
+                                <li>Anonymous posting</li>
+                                <li>Report a post</li>
+                                <li>Hide a post</li>
+                                <li>Mark as positive</li>
+                                <li>Mark as negative</li>
+                                <li>Click on category name to see all posts filtered to specified category</li>
+                            </ol>
+                        </div>
+                        
+                        <div class="summary">
+                            <h2 class="heading">Summary:</h2>
+                            <p>
+                                This was a fun project that my friend <a href="https://github.com/kianchachi">Kian Chachi</a> and I developed.
+                                We joined forces to create a unique anonymous social media platform. We wanted to provide users with the ability
+                                to voice their opinion without the worry of curating their post before posting. In today's society, we tend to 
+                                restrict ourselves in feare of ridicule or embarassment. This website was designed with the purpose of removing the
+                                link to an individual to focus more on the content itself and not the person making the post.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activity Tracker -->
+                <div class="overlay" id="activityTracker_nav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('activityTracker')">&times;</a>
+                    <div class="overlay-content" onclick="closeNav('activityTracker')">
+                        <h1 class="heading">Activity Tracker</h1>
+                        <p class="summary">Activity Tracker is a planning app. Users can create and join activities. Activities cannot be made in the past.
+                        </p>
+                        <div style="display: inline-block; width: 80%;">
+                            <a target="_blank" href="static/images/ActivityTracker/ActivityTrackerHome.png"><img src="static/images/ActivityTracker/ActivityTrackerHome.png" alt="HomePage"></a>
+                            <p>Standard user login with validation.</p>
+                        </div>
+                        <div style="width: 80%; margin: 0 auto; margin-top: 2rem;">
+                            <a target="_blank" href="static/images/ActivityTracker/ActivityTrackerDashboard.png"><img src="static/images/ActivityTracker/ActivityTrackerDashboard.png" alt="HomePage"></a>
+                            <p>This is the dashboard. This is where users will be able to see their feed.</p>
+                        </div>
+
+                        <h3 class="heading">Features</h3>
+                        <div id="features">
+
+                            <ol style="text-align: left;">
+                                <li>Add a new post</li>
+                                <li>Login and Registration with Validations
+                                    <ul>
+                                        <li>Validation messages should display for unsuccessful submissions</li>
+                                        <li>(Registration) Password with a minimum length of 8 characters</li>
+                                        <li>(Registration) Name minimum length of 2 characters</li>
+                                        <li>(Registration) Valid Email Address</li>
+                                        <li>(Registration) No duplicate Emails</li>
+                                        <li>(Login) Valid Email and Password</li>
+                                    </ul>
+                                </li>
+                                <li>Dashboard
+                                    <ul>
+                                        <li>Activities should be displayed in order of date/time with the most recent at the top.</li>
+                                        <li>Ability to join or leave an activity</li>
+                                        <li>Ability to delete an activity if the logged user created it.</li>
+                                        <li>Acitivity name redirects to the Activity page.</li>
+                                        <li>Add new activity button redirects to New Activity page.</li>
+                                    </ul>
+                                </li>
+                                <li>Activity Details
+                                    <ul>
+                                        <li>Ability to join or leave activity based on the current logged user.</li>
+                                        <li>Can delete activity if the logged in user created it.</li>
+                                        <li>List all other users participating in the activity.</li>
+                                    </ul>
+                                </li>
+                                <li>New Activity
+                                    <ul>
+                                        <li>Activity Date must be in the future</li>
+                                        <li>Title and description are required fields</li>
+                                    </ul>
+                                </li>
+                                <li>Passwords should be a min length of 8 characters, contain at least 1 number, 1 letter, and a special character.</li>
+                                <li>Actvities that are in the past should not be displayed in the list.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
                 
-                <!-- WeddingPlanner -->
-                <div class="overlay" id="weddingplanner_nav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('weddingplanner')">&times;</a>
-                    <div class="overlay-content" onclick="closeNav('weddingplanner')">
-                        <h1>WeddingPlanner</h1>
-                        <p>WeddingPlanner is a project I am using to document all my notes in one convenient place.</p>
-                        <a href=""><img src="css/images/SlickNotesFull01.png" alt=""></a>
-                        <a href=""><img src="css/images/SlickNotesFull02.png" alt=""></a>
-                        <p>Users may sign up to create their own notebooks with notes only accessible to them.</p>
-                        <p>I plan to one day integrate a sharing option that would allow quick and easy collaboration between note-takers.</p>
-                        <p>For now, users may create notes and categorize them as they wish.</p>
-                        <h2><a target="_blank" href="http://54.173.99.170/">Slick Notes Website</a></h2>
+                <!-- Hobbyhub -->
+                <div class="overlay" id="hobbyhub_nav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav('hobbyhub')">&times;</a>
+                    <div class="overlay-content" onclick="closeNav('hobbyhub')">
+                        <h1 class="heading">Hobby Hub</h1>
+                        <p class="summary">Hobby Hub is a planning app. Users can create and join activities. Activities cannot be made in the past.
+                        </p>
+                        <div style="display: inline-block; width: 80%;">
+                            <a target="_blank" href="static/images/HobbyHub/HobbyHubHome.png"><img src="static/images/HobbyHub/HobbyHubHome.png" alt="HomePage"></a>
+                            <p>Standard user login with validation.</p>
+                        </div>
+                        <div style="width: 80%; margin: 0 auto; margin-top: 2rem;">
+                            <a target="_blank" href="static/images/HobbyHub/HobbyHub.png"><img src="static/images/HobbyHub/HobbyHub.png" alt="HomePage"></a>
+                            <p>This is the dashboard. This is where users will be able to see their feed.</p>
+                        </div>
+
+                        <h3 class="heading">Features</h3>
+                        <div id="features">
+
+                            <ol style="text-align: left;">
+                                <li>Add a new post</li>
+                                <li>Login and Registration with Validations
+                                    <ul>
+                                        <li>Validation messages should display for unsuccessful submissions</li>
+                                        <li>(Registration) Password with a minimum length of 8 characters</li>
+                                        <li>(Registration) First Name and Last Name with a minimum length of 2 characters</li>
+                                        <li>(Registration) Username between 3 and 15 characters</li>
+                                        <li>(Registration) No duplicate Usernames</li>
+                                        <li>(Login) Valid Email and Password</li>
+                                    </ul>
+                                </li>
+                                <li>Dashboard
+                                    <ul>
+                                        <li>Display all hobbies and number of enthusiasts for each hobby</li>
+                                        <li>Clicking on the name of a hobby should route to a hobby-details page</li>
+                                    </ul>
+                                </li>
+                                <li>Hobby Details
+                                    <ul>
+                                        <li>Display the name and description of shown Hobby</li>
+                                        <li>Display the names of all users that have added shown hobby</li>
+                                        <li>Include a button to add shown hobby to user's hobbies</li>
+                                    </ul>
+                                </li>
+                                <li>New Hobby
+                                    <ul>
+                                        <li>Validation messages should display for unsucessful submissions</li>
+                                        <li>Name and description are required fields</li>
+                                    </ul>
+                                </li>
+                                <li>Hobby Names should be unique</li>
+                                <li>User should be able to edit/update hobbies. Update form should validate for required fields.</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
 
         </div> <!-- End of Projects-Container -->
 
-        <div id="github">
-            <h2>Github Contributions for 2019</h2>
-            <a target="_blank" href="https://github.com/alexege"><img src="http://ghchart.rshah.org/alexege" alt="Alexander Ege's Github chart" /></a>
-        </div>
+        <a target="_blank" href="https://github.com/alexege" style="text-decoration: none;">
+            <div id="github">
+                <h2>Github Contributions for 2019</h2>
+                <img src="http://ghchart.rshah.org/alexege" alt="Alexander Ege's Github chart" />
+            </div>
+        </a>
 
         <h1 class="title">Resume</h1>
         
@@ -291,10 +456,14 @@
                     <h3>Full Stack Web Developer</h3>
                     <div id="resume-links">
                         <div class="resume-link">
-                            <i class="fas fa-map-marker-alt"></i>Orange County, CA
+                            <a target="_blank" href="https://www.google.com/maps/place/3335+Susan+St,+Costa+Mesa,+CA+92626/@33.6945678,-117.9169291,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcdf52f56aabbf:0xbe0fab7e848183b6!8m2!3d33.6945634!4d-117.9147404">
+                                <i class="fas fa-map-marker-alt"></i>Orange County, CA
+                            </a>
                         </div>
                         <div class="resume-link">
-                            <i class="far fa-envelope"></i>Alexander@Ege.com
+                            <a href="mailto:alexander@ege.com">
+                                <i class="far fa-envelope"></i>Alexander@Ege.com
+                            </a>
                         </div>
                         <div class="resume-link">
                             <i class="fas fa-phone"></i>(530) 276-4648
@@ -323,9 +492,9 @@
             <div class="row">
                 <div class="column">
                     
-                    <h2>TECHNICAL SKILLS</h2>
-                    <div id="technologies">
-                        <h4>Languages:</h4>
+                <h2>TECHNICAL SKILLS</h2>
+                <div id="technologies">
+                    <h4>Languages:</h4>
                 <ul>
                     <li>C#, Python, JavaScript, HTML/CSS</li>
                 </ul>
@@ -367,7 +536,8 @@
                     <h4>Portfolio Site: <a target="_blank" href="http://ege.com/">www.Ege.com</a></h4>
                     <p>I have used HTML/CSS/JS to create a personal website that challenges traditional web layouts.</p>
                     
-                    <h4>BlurRead: <a href="http://www.blurread.com">www.blurread.com</a></h4>
+                    <!-- <h4>BlurRead: <a href="http://www.blurread.com">www.blurread.com</a></h4> -->
+                    <h4>BlurRead:</h4>
                     <p>An anonymous social media platform designed to allow users to speak their mind. Incorporated gaming aspect to encourage positive participation.</p>
 
                     <h2>HOBBIES</h2>
@@ -380,16 +550,16 @@
                     <div id="education">
                         <h2>EDUCATION</h2>
                         <p>Bachelor of Science in Computer Engineering <span class="date">December 2015</span></p>
-                        <p>Southern Illinois University</p>
+                        <p class="location">Southern Illinois University</p>
                         <p>Coding Dojo - Full Stack Web Development<span class="date">May 2019</span></p>
-                        <p>Orange County, CA</p>
+                        <p class="location">Orange County, CA</p>
                     </div>
 
                     <div id="professional_experience">
                         <h2>PROFESSIONAL EXPERIENCE</h2>
                         
                         <h4>Teaching Assistant and Full Stack Developer <span class="date">May 2019 - Present</span></h4>
-                        <p>Coding Dojo - Orange County, CA</p>
+                        <p class="location">Coding Dojo - Orange County, CA</p>
                         <ul>
                             <li>Shadow/support current Instructors</li>
                             <li>Support instructors through assisting in teaching through supplementary lectures and live demos</li>
@@ -398,7 +568,7 @@
                         </ul>
     
                         <h4>Technical Rotation Associate <span class="date">June 2016 - November 2017</span></h4>
-                        <p>Trend Micro - Irving, TX 75061</p>
+                        <p class="location">Trend Micro - Irving, TX 75061</p>
                         <ul>
                             <li>Provide technical support and customer service ensuring prompt problem resolution</li>
                             <li>Conducted Proof of Concept installations, Demos, and Best Practice implementations</li>
@@ -407,7 +577,7 @@
                         </ul>
     
                         <h4>Project Manager <span class="date">January 2015 - December 2016</span></h4>
-                        <p>Senior Design - Southern Illinois University, Carbondale</p>
+                        <p class="location">Senior Design - Southern Illinois University, Carbondale</p>
                         <ul>
                             <li>Collaborated with North American Lighting to develop a new means of identifying errors in production</li>
                             <li>Utilized a series of affordable $80 microphones to replace a system using multiple $20,000 cameras.</li>
@@ -416,7 +586,7 @@
                         </ul>
                         
                         <h4>Sales Team Member <span class="date">May 2012 - August 2012</span></h4>
-                        <p>Menards - Elgin, IL</p>
+                        <p class="location">Menards - Elgin, IL</p>
                         <ul>
                             <li>Provide excellent customer service by understanding and responding to customer needs.</li>
                         </ul>
@@ -457,15 +627,21 @@
                 </div>
 
                 <div id="dojo_content" class="info visible" style="text-align: center;">
-                    <h1>Coding Dojo</h1>
-                    <p>I attended the Coding Dojo bootcamp in May 2019 and began working there as a Teaching Assistant in September.</p>
-                    <p>The bootcamp covered the following stacks:</p>
-                    <ul>
-                        <li>Python with Django and Flask</li>
-                        <li>JavaScript with M.E.A.N</li>
-                        <li>CSharp with ASP.NET Core</li>
-                    </ul>
-                    <p>I graduated the coding bootcamp with a tripple blackbelt. This means for each stack, I was able to build a full stack application from scratch and have it deployed in a 5 hour window.</p>
+                    <h1 id="dojo_title">
+                        <a target="_blank" href="https://www.codingdojo.com/">Coding Dojo</a>
+                    </h1>
+                    <div id="edu_content">
+                        <p>To better strengthen my web development skills I decided to join a coding bootcamp.</p>
+                        <p>My bootcamp of choice was <a target="_blank" href="https://www.codingdojo.com/">Coding Dojo</a>, because it offers a 3 stack curriculum.
+                        <p>The technology stacks covered at Coding Dojo were:</p>
+                        <ul class="diamond">
+                            <li><i class="fab fa-python"></i> Python with Django and Flask</li>
+                            <li><i class="fab fa-js-square"></i> JavaScript with M.E.A.N</li>
+                            <li><i class="fab fa-microsoft"></i> CSharp with ASP.NET Core</li>
+                        </ul>
+                        <p>I graduated the coding bootcamp with a tripple blackbelt. This means for each stack, I was able to build a full stack application from scratch, meet the desired requirements, and have it deployed to AWS in a 5 hour timeframe.</p>
+                        <p>After graduating in August 2019, I was offered a position as a Teaching Assistant and have been working there ever since.</p>
+                    </div>
                     
                     <a target="_blank" href="/static/images/dojo-diploma.png">
                         <img src="/static/images/dojo-diploma.png" alt="" style="width: 48%; display: inline-block;">
@@ -495,7 +671,6 @@
                 </div>
                 
                 <div id="python_content" class="info">
-                    <p>Our python stack involved learning about Flask, Django, and SQL.</p>
                     <h3>Flask</h3>
                     <ul>
                         <li>Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions.</li>
@@ -514,7 +689,7 @@
                 </div>
                 
                 <div id="mean_content" class="info">
-                    <h3>Mongo</h3>
+                    <h3>MongoDB</h3>
                     <ul>
                         <li>MongoDB is a cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with schema. MongoDB is developed by MongoDB Inc.</li>
                     </ul>
@@ -555,33 +730,67 @@
                     </ul>
                 </div>
 
-                <!-- <div style="width: 100%; text-align: center;">
-                    <img src="/static/images/dojo-diploma.png" alt="" style="width: 45%; display: inline-block;">
-                    <img src="/static/images/LetterOfRecommendation.png" alt="" style="width: 45%; display: inline-block;">
-                </div> -->
-
         </div>
+<!-- 
+        <h1 class="title">Hobbies</h1>
+
+        <div id="hobbies-container">
+
+            <div class="grid-container">
+                <div class="grid-item hobby">
+                    <h2>Youtube</h2>
+                    <iframe width="400" height="200" src="https://www.youtube.com/embed/c2ETTpDty7I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="grid-item hobby">
+                    <h2>Unicycling</h2>
+                    <img src="/static/images/UnicycleCover.png" alt="" style="height: 200px;">
+                    <p>I've been riding a unicycle since 2010.</p>
+                </div>
+                <div class="grid-item hobby">
+                    <h2>Arduino/Raspberry Pi</h2>
+                    Item 3
+                </div>
+            </div>
+            
+        </div> -->
 
         <h1 class="title">Contact Me</h1>
 
         <div id="contact-container">
             <form action="https://formspree.io/xvozvdwz" method="POST">
-            <label>
-              Your Name:
-              <input type="text" name="name">
-            </label><br>
-            <label>
-              Your email:
-              <input type="text" name="email">
-            </label><br>
-            <label>
-              Your message:
-              <textarea name="message"></textarea>
-            </label><br>
+                <table>
+                    <tr>
+                        <td>
+                            <label for='nameinput'>Name:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id='nameinput'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='subject'>Subject:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="subject" id='subject'>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for='message'>Message:</label>
+                        </td>
+                        <td>
+                            <textarea name="message" id='message' rows='5'></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'>
+                            <button type="submit" id="contactButton">Send Message</button>
+                        </td>
+                    </tr>
+                </table>
           
             <!-- your other form fields go here -->
-          
-            <button type="submit">Send</button>
           </form>
         </div>
 

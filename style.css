@@ -206,7 +206,7 @@ html {
 
 #headshot:hover {
     background-color: white;
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 
 #headshotbox {
@@ -1966,6 +1966,7 @@ html {
     #about-paragraph {
         font-size: 0.75rem;
         padding: 1rem 1rem;
+        line-height: 1.5rem;
     }
 
     #Resume-Container h1 {

@@ -998,6 +998,7 @@ html {
 /* Skills */
 #skills-container {
     width: 80vw;
+    margin: 0 auto;
 }
 
 /* Contact  */
@@ -2025,7 +2026,7 @@ html {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     body {
-        background: green;
+        /* background: green; */
     }
 
     .grid-container {
@@ -2043,7 +2044,8 @@ html {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     body {
-        background: blue;
+        /* background: blue; */
+        font-size: 15px;
     }
 
     .grid-container {
@@ -2056,12 +2058,14 @@ html {
         'project5 project6'
         'project7 project8'
     }
+
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     body {
-        background: orange;
+        /* background: orange; */
     }
     
     .grid-container {
@@ -2076,6 +2080,7 @@ html {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+
     body {
         background: black;
     }
@@ -2085,5 +2090,10 @@ html {
         'title1 title1 title2 title2'
         'project1 project2 project3 project4'
         'project5 project6 project7 project8'
-        }
+    }
+
+    #skills-container {
+        /* width: 100vw; */
+        overflow: hidden;
+    }
 }

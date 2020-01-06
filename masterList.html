@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.def, .ex {
+    margin-left: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p {
+    margin-left: 40px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem 0;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(134, 133, 133);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+#sidenav a:hover {
+  color: #f1f1f1;
+}
+
+#sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  #sidenav {padding-top: 15px;}
+  #sidenav a {font-size: 18px;}
+}
+</style>
+<body>
+
+    <div id="main">
+
+    <button onclick="toggleNav()">Open/Hide</button>
+
+    <h1 class="title">Master List</h1>
+
+    <div id="mySidenav" class="sidenav">
+        <h2>Index</h2>
+        <a href="#Arrays">Arrays</a>
+        <a href="#API">API</a>
+        <a href="#Binary Search Tree">Binary Search Tree</a>
+        <a href="#Linked Lists">Lists</a>
+        <a href="#OSI Model">Model</a>
+        <a href="#TCP">TCP</a>
+        <a href="#UDP">UDP</a>
+        <a href="#REST">REST</a>
+        <a href="#Stacks">Stacks</a>
+        <a href="#Queues">Queues</a>
+        <a href="#Heaps">Heaps</a>
+        <a href="#Hashing">Hashing</a>
+        <a href="#Graph">Graph</a>
+        <a href="#Matrix">Matrix</a>
+        <a href="#Matrix">Matrix</a>
+        
+        <h5 class="category">Data Structures</h5>
+    </div>
+
+    <h2>Arrays</h2>
+    Definition:
+    <p class="def">Definition:</p>
+    <p>An array is a data structure to store information.</p>
+
+    <p class="ex">Example:</p>
+    <p>Example bro</p>
+
+    <h1>H1</h1>
+    <h2>H2</h2>
+    <h3>H3</h3>
+    <h4>H4</h4>
+    <h5>H5</h5>
+    <h6>H6</h6>
+
+
+    <h2>Linked Lists</h2>
+    <ul>
+        <li>Singly Linked List</li>
+        <li>Doubly Linked List</li>
+        <li>Circular Linked List</li>
+        <li>Circular Doubly Linked List</li>
+    </ul>
+
+    <h2>Data Structures
+        <ul>
+            <li></li>
+        </ul>
+    </h2>
+
+    </div> <!--End of Main-->
+    
+    <script>
+        $(document).ready(function(){
+            console.log("Toggle:", localStorage.getItem('toggled'));
+            if(localStorage.getItem('toggled') == null){
+                localStorage.setItem('toggled', true);
+            } else {
+                document.getElementById("mySidenav").style.width = '20vw';
+                document.getElementById("main").style.marginLeft = '20vw';                
+                localStorage.setItem('toggled', false);
+            }
+        });
+
+        function toggleNav() {
+            var toggled = localStorage.getItem('toggled');
+            if(toggled == 'true') {
+                document.getElementById("mySidenav").style.width = '20vw';
+                document.getElementById("main").style.marginLeft = '20vw';
+                localStorage.setItem('toggled', false);
+            } else {
+                document.getElementById("mySidenav").style.width = '0vw';
+                document.getElementById("main").style.marginLeft = '0vw';
+                localStorage.setItem('toggled', true);
+            }
+        }
+
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+
+</body>
+</html>

@@ -13,6 +13,14 @@ html {
     scroll-behavior: smooth;
 }
 
+#thank {
+    color: white;
+    text-align: center;
+    font-size: 0.5rem;
+    display: none;
+    padding: 4rem;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;

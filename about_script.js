@@ -93,3 +93,39 @@ function typewriter(){
     // Start the typing effect on load
     _INTERVAL_VAL = setInterval(Type, 150);
 }
+
+$(document).ready(function() {
+
+	$('#contactForm').on('submit', function(e) {
+		e.preventDefault();
+		
+		//get the name field value
+		var name = $('#nameinput').val();
+		//get the name field value
+		var subject = $('#subject').val();
+		//get the message
+		var message = $('#message').val();
+					
+		//pretend we don't need validation
+		
+		//send to formspree
+		$.ajax({
+			url:'https://formspree.io/xvozvdwz',
+			method:'POST',
+			data:{
+				name:name,
+				subject:subject,
+                message:message,
+			},
+			dataType:"json",
+			success:function() {
+				console.log('success');	
+				$('#contact-container').hide();
+				$('#thank').show();
+			}	
+
+		});		
+		
+	});
+
+});	

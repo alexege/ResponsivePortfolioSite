@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    $("#preloader").delay(3000).addClass('loaded');
     typewriter();
 });
 
@@ -9,8 +10,8 @@ $(document).on('mouseenter', 'a', function(e){
     // console.log("Mouse positionX: ", e.clientX);
     // console.log("Mouse positionY: ", e.clientY);
 
-    document.getElementById('follow').style.left = `${xMousePos - 25}px`;
-    document.getElementById('follow').style.top = `${yMousePos - 25}px`;
+    document.getElementById('follow').style.left = `${xMousePos - 12.5}px`;
+    document.getElementById('follow').style.top = `${yMousePos - 12.5}px`;
 
     document.getElementById('corner-top-left').style.borderLeft = '4px solid cyan';
     document.getElementById('corner-top-left').style.borderTop = '4px solid cyan';

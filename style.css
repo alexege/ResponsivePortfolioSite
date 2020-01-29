@@ -103,7 +103,7 @@ html {
 #AE_Logo {
     position: absolute;
     z-index: 1;
-    width: 50px;
+    width: 5px;
     left: 2rem;
     top: 2rem;
 }
@@ -538,12 +538,12 @@ html {
     background: url('/static/images/AELogo.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-size: 50px;
+    background-size: 25px;
     background-position-x: center;
     background-position-y: center;
     /* background-color: red; */
-    width: 50px;
-    height: 50px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     transition: all 1s;
     z-index: -1;
@@ -969,6 +969,22 @@ html {
     width: 100%;
     text-align: center;
 } */
+
+#resumeDownload {
+    border: 1px solid #06aae2;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#resumeDownloadBox {
+    text-align: center;
+    margin: 2rem;
+}
+
+#resumeDownload:hover {
+    box-shadow: 0 0 30px 5px rgba(24, 153, 240, 0.6); 
+}
 
 #technologies {
     /* width: 40%; */
@@ -2105,3 +2121,140 @@ html {
         overflow: hidden;
     }
 }
+
+.up {
+    transform: translate(0px, -50px);
+}
+
+.upRight {
+    transform: translate(50px, -50px);
+}
+
+.downRight {
+    transform: translate(50px, 50px);
+}
+
+.down {
+    transform: translate(0px, 50px);
+}
+
+.downLeft {
+    transform: translate(-50px, 50px);
+}
+
+.upLeft {
+    transform: translate(-50px, -50px);
+}
+
+/* Level 2 */
+
+.up2 {
+    transform: translate(0px, -100px);
+}
+
+.upRight2 {
+    transform: translate(100px, -100px);
+}
+
+.right2 {
+    transform: translate(100px, 0px);
+}
+
+.downRight2 {
+    transform: translate(100px, 100px);
+}
+
+.down2 {
+    transform: translate(0px, 100px);
+}
+
+.left2 {
+    transform: translate(-100px, 0px);
+}
+
+.downLeft2 {
+    transform: translate(-100px, 100px);
+}
+
+.upLeft2 {
+    transform: translate(-100px, -100px);
+}
+/* Level 3 */
+
+.up3 {
+    transform: translate(0px, -150px);
+}
+
+.upRight3 {
+    transform: translate(150px, -150px);
+}
+
+.right3 {
+    transform: translate(150px, 0px);
+}
+
+.downRight3 {
+    transform: translate(150px, 150px);
+}
+
+.down3 {
+    transform: translate(0px, 150px);
+}
+
+.left3 {
+    transform: translate(-150px, 0px);
+}
+
+.downLeft3 {
+    transform: translate(-150px, 150px);
+}
+
+.upLeft3 {
+    transform: translate(-150px, -150px);
+}
+
+/* ---------------------------------
+		Preloader Css
+    --------------------------------- */
+    #preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 5000;
+    }
+
+    #preloader.loaded {
+        visibility: hidden;
+    }
+
+    #preloader.loaded .top-side {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+        -webkit-transition-delay: 1s;
+                transition-delay: 1s;
+    }
+
+    #preloader .top-side {
+        top: 0;
+    }
+
+    #preloader.loaded .bottom-side {
+        -webkit-transform: translateY(100%);
+                transform: translateY(100%);
+        -webkit-transition-delay: 1s;
+                transition-delay: 1s;
+    }
+
+    #preloader .bottom-side {
+        bottom: 0;
+    }
+
+    #preloader .top-side, 
+    #preloader .bottom-side {
+        position: absolute;
+        width: 100%;
+        height: 50%;
+        background: black;
+        -webkit-transition: all .7s ease-in-out;
+                transition: all .7s ease-in-out;
+    }

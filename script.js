@@ -119,11 +119,14 @@ $(document).on('mouseover', '.hexagon', function(e){
 
 function randomFadeInOut(){
     setInterval(function(){
+        console.log("toggleFade:", toggleFade);
         var random_hex_id = parseInt(Math.random()*113);
         if(random_hex_id == 0){
             random_hex_id = 1;
         }
-        document.getElementsByClassName(`hex${random_hex_id}`)[0].classList.toggle('fade');
+        if(toggleFade){
+            document.getElementsByClassName(`hex${random_hex_id}`)[0].classList.toggle('fade');
+        }
     }, 500);
 }
 
@@ -193,7 +196,10 @@ $(document).on('mousedown', '.hexagon', function(){
     this.classList.toggle("filled");
 });
 
+var toggleFade = true;
+
 $(document).ready(function(){
+    toggleFade = true;
     //Set all hexagons to a starting opacity
     setHexOpacity();
     randomFadeInOut();
@@ -216,3 +222,111 @@ function scrollToTop(){
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+$(document).on('mouseenter', '.enter_hex', function(){
+
+    toggleFade = false;
+
+    var hexs = document.getElementsByClassName('fade');
+    for(var i = 0; i < hexs.length; i++){
+        hexs[i].classList.remove("fade");
+    }
+
+    document.getElementsByClassName("hex2")[0].classList.toggle("up");
+    document.getElementsByClassName("hex3")[0].classList.toggle("upRight");
+    document.getElementsByClassName("hex4")[0].classList.toggle("downRight");
+    document.getElementsByClassName("hex5")[0].classList.toggle("down");
+    document.getElementsByClassName("hex6")[0].classList.toggle("downLeft");
+    document.getElementsByClassName("hex7")[0].classList.toggle("upLeft");
+
+    document.getElementsByClassName("hex8")[0].classList.toggle("up2");
+    document.getElementsByClassName("hex9")[0].classList.toggle("upRight2");
+    document.getElementsByClassName("hex10")[0].classList.toggle("upRight2");
+    document.getElementsByClassName("hex11")[0].classList.toggle("right2");
+    document.getElementsByClassName("hex12")[0].classList.toggle("downRight2");
+    document.getElementsByClassName("hex13")[0].classList.toggle("downRight2");
+    document.getElementsByClassName("hex14")[0].classList.toggle("down2");
+    document.getElementsByClassName("hex15")[0].classList.toggle("downLeft2");
+    document.getElementsByClassName("hex16")[0].classList.toggle("downLeft2");
+    document.getElementsByClassName("hex17")[0].classList.toggle("left2");
+    document.getElementsByClassName("hex18")[0].classList.toggle("upLeft2");
+    document.getElementsByClassName("hex19")[0].classList.toggle("upLeft2");
+    
+    document.getElementsByClassName("hex20")[0].classList.toggle("upRight3");
+    document.getElementsByClassName("hex21")[0].classList.toggle("upRight3");
+    document.getElementsByClassName("hex22")[0].classList.toggle("upRight3");
+    document.getElementsByClassName("hex23")[0].classList.toggle("right3");
+    document.getElementsByClassName("hex24")[0].classList.toggle("right3");
+    document.getElementsByClassName("hex25")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex26")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex27")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex28")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex29")[0].classList.toggle("down3");
+    document.getElementsByClassName("hex30")[0].classList.toggle("downLeft3");
+    document.getElementsByClassName("hex31")[0].classList.toggle("downLeft3");
+    document.getElementsByClassName("hex32")[0].classList.toggle("downLeft3");
+    document.getElementsByClassName("hex33")[0].classList.toggle("left3");
+    document.getElementsByClassName("hex34")[0].classList.toggle("left3");
+    document.getElementsByClassName("hex35")[0].classList.toggle("upLeft3");
+    document.getElementsByClassName("hex36")[0].classList.toggle("upLeft3");
+    document.getElementsByClassName("hex37")[0].classList.toggle("upLeft3");
+    document.getElementsByClassName("hex38")[0].classList.toggle("up3");
+
+    setTimeout(function(){
+
+        for(var i = 39; i < 114; i++){
+            $(`.hex${i}`).fadeOut();
+            // document.getElementsByClassName(`hex${i}`)[0].style.opacity = 0;
+        }
+    }, 500);
+});
+
+$(document).on('mouseleave', '.enter_hex', function(){
+    
+    toggleFade = true;
+
+    document.getElementsByClassName("hex2")[0].classList.toggle("up");
+    document.getElementsByClassName("hex3")[0].classList.toggle("upRight");
+    document.getElementsByClassName("hex4")[0].classList.toggle("downRight");
+    document.getElementsByClassName("hex5")[0].classList.toggle("down");
+    document.getElementsByClassName("hex6")[0].classList.toggle("downLeft");
+    document.getElementsByClassName("hex7")[0].classList.toggle("upLeft");
+
+    document.getElementsByClassName("hex8")[0].classList.toggle("up2");
+    document.getElementsByClassName("hex9")[0].classList.toggle("upRight2");
+    document.getElementsByClassName("hex10")[0].classList.toggle("upRight2");
+    document.getElementsByClassName("hex11")[0].classList.toggle("right2");
+    document.getElementsByClassName("hex12")[0].classList.toggle("downRight2");
+    document.getElementsByClassName("hex13")[0].classList.toggle("downRight2");
+    document.getElementsByClassName("hex14")[0].classList.toggle("down2");
+    document.getElementsByClassName("hex15")[0].classList.toggle("downLeft2");
+    document.getElementsByClassName("hex16")[0].classList.toggle("downLeft2");
+    document.getElementsByClassName("hex17")[0].classList.toggle("left2");
+    document.getElementsByClassName("hex18")[0].classList.toggle("upLeft2");
+    document.getElementsByClassName("hex19")[0].classList.toggle("upLeft2");
+    
+    document.getElementsByClassName("hex20")[0].classList.toggle("upRight3");
+    document.getElementsByClassName("hex21")[0].classList.toggle("upRight3");
+    document.getElementsByClassName("hex22")[0].classList.toggle("upRight3");
+    document.getElementsByClassName("hex23")[0].classList.toggle("right3");
+    document.getElementsByClassName("hex24")[0].classList.toggle("right3");
+    document.getElementsByClassName("hex25")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex26")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex27")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex28")[0].classList.toggle("downRight3");
+    document.getElementsByClassName("hex29")[0].classList.toggle("down3");
+    document.getElementsByClassName("hex30")[0].classList.toggle("downLeft3");
+    document.getElementsByClassName("hex31")[0].classList.toggle("downLeft3");
+    document.getElementsByClassName("hex32")[0].classList.toggle("downLeft3");
+    document.getElementsByClassName("hex33")[0].classList.toggle("left3");
+    document.getElementsByClassName("hex34")[0].classList.toggle("left3");
+    document.getElementsByClassName("hex35")[0].classList.toggle("upLeft3");
+    document.getElementsByClassName("hex36")[0].classList.toggle("upLeft3");
+    document.getElementsByClassName("hex37")[0].classList.toggle("upLeft3");
+    document.getElementsByClassName("hex38")[0].classList.toggle("up3");
+
+    for(var i = 39; i < 114; i++){
+        $(`.hex${i}`).fadeIn();
+        // document.getElementsByClassName(`hex${i}`)[0].style.opacity = 0;
+    }
+});

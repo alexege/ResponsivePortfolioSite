@@ -13,6 +13,47 @@ html {
     scroll-behavior: smooth;
 }
 
+.red {
+    color: red;
+}
+
+.live {
+    text-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red; 
+    font-weight:bolder;
+    animation: blink 5s infinite ease-in-out;
+    margin-right: 10px;
+}
+
+@keyframes blink {
+    0% {
+        color: red;
+        text-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red; 
+    }
+    
+    50% {
+        color: white;
+        text-shadow: 0 0 white;
+    }
+    
+    100% {
+        color: red;
+        text-shadow: 0 0 10px red, 0 0 10px red, 0 0 10px red; 
+    }
+}
+
+#liveContainer i {
+    font-size: 1rem;
+}
+
+#liveContainer {
+    display: block;
+    border: 1px solid transparent;
+}
+
+#liveContainer:hover {
+    border: 1px solid white;
+}
+
 #thank {
     color: white;
     text-align: center;
